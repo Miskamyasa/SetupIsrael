@@ -1,0 +1,14 @@
+export default function Polygon() {
+    return (
+        <svg
+            fill="none"
+            height="178"
+            viewBox="0 0 178 178"
+            width="178"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 0H178V78C178 133.228 133.228 178 78 178H0V0Z"
+                fill="currentColor" />
+        </svg>
+    )
+}

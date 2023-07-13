@@ -1,23 +1,22 @@
-import {Metadata} from 'next'
-import Hero from '../components/hero/Hero'
-import Services from '@/components/services/Services'
+import {Metadata} from "next"
+import Hero from "../components/Hero"
 
 export const metadata: Metadata = {
-    title: 'Home',
+    title: "Home",
     other: {
-        meta: '###',
+        meta: "###",
     },
 }
-
 
 
 export default function Home() {
     return (
         <main className="">
             <Hero
-                title="123"
-                description="123"
-                imageSrc="/images/stain.png"
+                ctaText="Contact Now"
+                description="With us you can find 17 different sets, ranging from a gorgeous room of mirrors, a colorful prison to a professional green screen for video editing."
+                imageSrc="https://placekitten.com/754/512"
+                title="Unlock the Potential of our Space and book it Today!"
             />
             <Services />
         </main>
