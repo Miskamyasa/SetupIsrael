@@ -1,5 +1,6 @@
 import {Metadata} from 'next'
 import Hero from '../components/hero/Hero'
+import Services from '@/components/services/Services'
 
 export const metadata: Metadata = {
     title: 'Home',
@@ -18,6 +19,7 @@ export default function Home() {
                 description="123"
                 imageSrc="/images/stain.png"
             />
+            <Services />
         </main>
     )
 }
