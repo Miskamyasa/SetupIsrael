@@ -2,26 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer base {
+    :root {
+        /* colors */
+        --color-primary: #2639ED;
+        --color-business: #7000FF;
+        --color-personal: #FFD600;
+        --color-mothers: #FA00FF;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+        --color-dark: #565656;
+        --color-dimmed: #757575;
+        --color-bright: #FFFFFF;
+
+        --color-outline: #E0E0E0;
+
+        /* svg fills */
+        --color-gust: #DAE9FF;
+        --color-rameo: #FFF5DB;
+        --color-meraki: #FEE3FF;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    /* md */
+    @media (min-width: 768px) {
+        html {
+            font-size: 14px;
+        }
+    }
+
+    /* lg */
+    @media (min-width: 1024px) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    body {
+        color: #020202;
+    }
+
+
+    h1,
+    h2 {
+        color: #020202;
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: normal;
+        max-width: 480px;
+    }
+
+    p {
+        color: #565656;
+        font-size: 1rem;
+        line-height: 160%;
+        max-width: 560px;
+    }
+
+    a {
+        transition: 250ms color, 250ms background-color;
+    }
+
+    a,
+    input,
+    button {
+        outline: none;
+        outline-offset: 2px;
+    }
+
+    a:focus-visible,
+    input:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--color-outline);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
 }

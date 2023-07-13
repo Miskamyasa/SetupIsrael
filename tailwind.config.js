@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,12 +9,22 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      extend: {
+          colors: {
+              primary: "var(--color-primary)",
+              business: "var(--color-business)",
+              personal: "var(--color-personal)",
+              mothers: "var(--color-mothers)",
+              dark: "var(--color-dark)",
+              dimmed: "var(--color-dimmed)",
+              bright: "var(--color-bright)",
+              gust: "var(--color-gust)",
+              rameo: "var(--color-rameo)",
+              meraki: "var(--color-meraki)",
+          },
+          fontFamily: {
+              sans: ["RubikVariable", "Rubik", ...defaultTheme.fontFamily.sans],
+          },
     },
   },
   plugins: [],
