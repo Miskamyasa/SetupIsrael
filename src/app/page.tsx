@@ -13,9 +13,10 @@ export default function Home() {
     return (
         <main className="">
             <Hero
-                description="123"
-                imageSrc="/images/stain.png"
-                title="123"
+                ctaText="Contact Now"
+                description="With us you can find 17 different sets, ranging from a gorgeous room of mirrors, a colorful prison to a professional green screen for video editing."
+                imageSrc="https://placekitten.com/754/512"
+                title="Unlock the Potential of our Space and book it Today!"
             />
         </main>
     )
