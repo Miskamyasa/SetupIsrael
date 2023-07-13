@@ -1,4 +1,5 @@
-export function locatizePath(path: string) {
-    const { locale } = window.__NEXT_DATA__;
-    return `/${locale}${path}`;
+export function localizePath(path: string) {
+    const [, ...splitPath] = path.split("/")
+    // TODO: implement
+    return `/${splitPath.join("/")}`
 }
