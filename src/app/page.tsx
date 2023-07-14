@@ -1,5 +1,6 @@
 import {Metadata} from "next"
 import Hero from "../components/Hero"
+import Services from "../components/services/Services"
 
 export const metadata: Metadata = {
     title: "Home",

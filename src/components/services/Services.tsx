@@ -1,9 +1,25 @@
+import Card from "./Card";
+import blueIcon from "../../assets/svg/services/blue_icon.svg";
+import purpleIcon from "../../assets/svg/services/purple_icon.svg";
+import yellowIcon from "../../assets/svg/services/yellow_icon.svg";
+import dots from "../../assets/svg/services/dots_service.svg";
+import Ellipse_87 from "../svg/Ellipse_87";
+import Image from "next/image";
+
 export default function Services() {
     return (
-        <section className="container">
-            <div className="flex justify-around">
-                <div className="self-center">
-                    <div className="w-96 text-black text-4xl font-normal">
+        <section className="container ">
+            <div className="flex justify-around relative mb-10">
+                <div className="absolute z-[-1] left-0 bottom-[40px]">
+                    <Image alt="Dots SVG" height={300} src={dots} width={400} />
+                </div>
+                <div className="absolute z-[-1] right-[40px] bottom-[-20px] ">
+                    <Ellipse_87 />
+                </div>
+                <div className="absolute w-9/12 h-4/5  right-0 top-28   bg-fuchsia-50 rounded-tl-[150px] z-[-1]"></div>
+                <div className="self-center relative ">
+                    <div className="absolute w-44 h-44  top-[-100px] left-[-80px] right-0 opacity-50 bg-orange-100 rounded-tl-[100px] z-[-1]"></div>
+                    <div className="w-96 text-black text-4xl font-bold ">
                         How can we help you?
                     </div>
                     <p className="w-96 text-neutral-600 text-base font-normal leading-relaxed">
@@ -12,39 +28,27 @@ export default function Services() {
                         professional green screen for video editing.
                     </p>
                 </div>
-                <div className="grid grid-rows-2 grid-flow-col gap-4 items-center">
-                    <div className="flex flex-col justify-center items-center row-span-3 w-80 h-96 bg-white rounded-3xl shadow border border-zinc-100">
-                        <div className="w-28 h-28 bg-indigo-100 rounded-2xl mb-10"></div>
-                        <h6 className="w-64 text-center text-black text-2xl font-normal">
-                            Business Corporate meet-up
-                        </h6>
-                        <p className="w-60 text-center text-neutral-500 text-base font-normal leading-snug">
-                            {
-                                "Celebrate your child's Bar Mitzvah in style and create memories!"
-                            }
-                        </p>
+                <div className="grid grid-rows-2 grid-flow-col gap-4 items-center ">
+                    <div className="row-span-3">
+                        <Card
+                            title="Business Corporate meet-up"
+                            subtitle="Celebrate your child's Bar Mitzvah in style and create memories!"
+                            imgSvg={blueIcon}
+                        />
                     </div>
-                    <div className="flex flex-col justify-center items-center w-80 h-96 bg-white rounded-3xl shadow border border-zinc-100">
-                        <div className="w-28 h-28 bg-purple-200 rounded-2xl mb-10"></div>
-                        <h6 className="w-64 text-center text-black text-2xl font-normal">
-                            Bar Mitzvah Birthday Party
-                        </h6>
-                        <p className="w-60 text-center text-neutral-500 text-base font-normal leading-snug">
-                            {
-                                "Celebrate your child's Bar Mitzvah in style and create memories!"
-                            }
-                        </p>
+                    <div>
+                        <Card
+                            title="Bar Mitzvah Birthday Party"
+                            subtitle="Celebrate your child's Bar Mitzvah in style and create memories!"
+                            imgSvg={purpleIcon}
+                        />
                     </div>
-                    <div className="flex flex-col justify-center items-center w-80 h-96 bg-white rounded-3xl shadow border border-zinc-100">
-                        <div className="w-28 h-28 bg-orange-100 rounded-2xl mb-10"></div>
-                        <h6 className="w-64 text-center text-black text-2xl font-normal">
-                            Book personal party
-                        </h6>
-                        <p className="w-60 text-center text-neutral-500 text-base font-normal leading-snug">
-                            {
-                                "Celebrate your child's Bar Mitzvah in style and create memories!"
-                            }
-                        </p>
+                    <div>
+                        <Card
+                            title="Book personal party"
+                            subtitle="Celebrate your child's Bar Mitzvah in style and create memories!"
+                            imgSvg={yellowIcon}
+                        />
                     </div>
                 </div>
             </div>
