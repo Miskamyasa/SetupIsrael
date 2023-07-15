@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Services() {
     return (
-        <section className="container p-0">
+        <section className="container ">
             <div className="flex justify-between relative mb-10">
             <div className="absolute w-9/12 h-4/5  right-0 top-28   bg-fuchsia-50 rounded-tl-[150px] z-[-1]"></div>
                 <div className="absolute z-[-2] left-0 bottom-[40px]">
