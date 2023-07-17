@@ -20,7 +20,7 @@ module.exports = {
               bright: "var(--color-bright)",
               gust: "var(--color-gust)",
               rameo: "var(--color-rameo)",
-              meraki: "var(--color-meraki)",
+              meraki: "var(--color-meraki)",              
           },
           fontFamily: {
               sans: ["RubikVariable", "Rubik", ...defaultTheme.fontFamily.sans],

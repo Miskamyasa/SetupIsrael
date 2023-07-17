@@ -7,21 +7,21 @@ interface CardProps {
     imgSvg: string;
 }
 
-export default function Card(props: CardProps) {
+export default function CardTest(props: CardProps) {
     return (
-        <div className="flex flex-col justify-center items-center w-80 h-96 bg-white rounded-3xl border">
+        <div className=" bg-white rounded-3xl border-2  md:h-auto lg:h-80 lg:w-60  flex flex-col items-center  px-3 mx-auto max-w-xs mb-6">
             <Image
-                className="mb-10"
+                className="mb-7 mt-6"
                 alt="blue icon"
-                height={112}
+                height={90}
                 src={props.imgSvg}
-                width={112}
+                width={90}
             />
 
-            <h6 className="w-64 text-center text-black text-2xl font-medium">
+            <h6 className="text-xl  font-bold text-center sm:mb-7 mb-1">
                 {props.title}
             </h6>
-            <p className="w-60 text-center text-neutral-500 text-base font-normal leading-snug">
+            <p className="text-lg  text-center md:pb-16 pb-10">
                 {props.subtitle}
             </p>
         </div>

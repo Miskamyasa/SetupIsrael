@@ -1,5 +1,5 @@
 
-import ServicesTest from "@/components/services/ServicesTest"
+import Services from "@/components/services/Services"
 import {Metadata} from "next"
 
 
@@ -16,7 +16,7 @@ export default function About() {
                 <h1 className="text-4xl font-bold">About</h1>
                 <p className="text-2xl">This is the about page</p>
             </main> */}
-            <ServicesTest/>
+            <Services/>
         </>
     )
 }
