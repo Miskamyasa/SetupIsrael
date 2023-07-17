@@ -9,7 +9,7 @@ interface CardProps {
 
 export default function CardTest(props: CardProps) {
     return (
-        <div className=" bg-white rounded-3xl border-2  md:h-auto h-80  flex flex-col items-center  px-3 mx-auto max-w-xs mb-6 ">
+        <div className=" bg-white rounded-3xl border-2  md:h-auto lg:h-80 lg:w-60  flex flex-col items-center  px-3 mx-auto max-w-xs mb-6">
             <Image
                 className="mb-7 mt-6"
                 alt="blue icon"
@@ -18,10 +18,10 @@ export default function CardTest(props: CardProps) {
                 width={90}
             />
 
-            <h6 className="text-xl sm:text-xl md:text-2xl  font-bold text-center mb-7">
+            <h6 className="text-xl  font-bold text-center sm:mb-7 mb-1">
                 {props.title}
             </h6>
-            <p className="text-lg sm:text-lg md:text-xl text-center md:pb-16">
+            <p className="text-lg  text-center md:pb-16 pb-10">
                 {props.subtitle}
             </p>
         </div>

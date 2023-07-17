@@ -9,20 +9,34 @@ import Image from "next/image";
 export default function ServicesTest() {
     return (
         <section className="containerTest ">
-            <div className="flex flex-col md:flex-row md:justify-between md:m-0 md:p-0">
-            {/* <div className="absolute w-9/12 h-4/5  right-0 top-28   bg-fuchsia-50 rounded-tl-[150px] z-[-1]"></div> */}
+            <div className="flex flex-col md:flex-row md:justify-around relative ">
                 {/* <div className="absolute z-[-2] left-0 bottom-[40px]">
                     <Image alt="Dots SVG" height={300} src={dots} width={400} />
                 </div> */}
                 {/* <div className="absolute z-[-1] right-[10px] bottom-[-20px] ">
                     <Ellipse_87 />
                 </div> */}
+                <div className="absolute  z-[-1] w-full h-full">
+                    <div className="flex justify-between w-full h-full">
+                        <div className="  h-44 w-44 md:self-center self-start opacity-50 mb-28 bg-orange-100 rounded-tl-[100px]"></div>
+                        {/* <div className=" w-9/12 h-4/5   bg-fuchsia-50 rounded-tl-[150px] "></div> */}
+                        <div className=" md:h-4/6 h-2/6 my-2 w-3/4 self-center  bg-fuchsia-50 rounded-tl-[150px] "></div>
+                    </div>
+                    <div className="flex  md:justify-between -mt-60 z-[-1] relative justify-around">
+                        <div className=" flex gap-3 sm:scale-100 ">
+                            <img alt="Dots SVG" src="/svg/dots.svg" />
+                            <img className="hidden md:block" alt="Dots SVG" src="/svg/dots.svg" />
+                        </div>
+                        <div className="self-end -mb-10">
+                            <Ellipse_87 />
+                        </div>
+                    </div>
+                </div>
                 <div className="flex flex-col items-center  md:items-start xs:px-20 mb-6  md:justify-center md:pr-5">
-                    {/* <div className="absolute w-44 h-44  top-[-10px] left-[-60px] right-0 opacity-50 bg-orange-100 rounded-tl-[100px] z-[-1]"></div> */}
                     <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold md:text-start">
                         How can we help you?
                     </div>
-                    <p className="text-lg  md:text-xl lg:text-2xl text-center md:text-start">
+                    <p className="text-lg   text-center md:text-start max-w-md">
                         With us you can find 17 different sets, ranging from a
                         gorgeous room of mirrors, a colorful prison to a
                         professional green screen for video editing.
