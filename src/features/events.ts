@@ -1,21 +1,21 @@
-import { EventEmitter } from "eventemitter3"
+import { EventEmitter } from "eventemitter3";
 
 
 const availableEvents = [
   "contact",
   "birthday",
-] as const
+] as const;
 
-export type AvailableEvents = typeof availableEvents[number]
+export type AvailableEvents = typeof availableEvents[number];
 
 export class Events extends EventEmitter<AvailableEvents> {
   constructor() {
-    super()
+    super();
   }
 
   emit(event: AvailableEvents, params: Record<string, unknown>) {
-    return super.emit(event, params)
+    return super.emit(event, params);
   }
 }
 
-export const events = new Events()
+export const events = new Events();

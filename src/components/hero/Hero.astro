@@ -1,11 +1,11 @@
 ---
-import { Image } from "@astrojs/image/components"
+import { Image } from "@astrojs/image/components";
 
-import type { AvailableEvents } from "../../features/events"
-import CTA from "../CTA/CTA.astro"
-import Circle from "../svg/Circle.astro"
-import Dots from "../svg/Dots.astro"
-import Polygon from "../svg/Polygon.astro"
+import type { AvailableEvents } from "../../features/events";
+import CTA from "../CTA/CTA.astro";
+import Circle from "../svg/Circle.astro";
+import Dots from "../svg/Dots.astro";
+import Polygon from "../svg/Polygon.astro";
 
 
 export interface Props {
@@ -22,7 +22,7 @@ const {
   image,
   cta,
   ctaEvent,
-} = Astro.props
+} = Astro.props;
 ---
 
 <section
@@ -51,21 +51,21 @@ const {
           format="webp"
           height={480}
           src={image}
-          width={715}
+          width={714}
         />
       </div>
       <div
-        class={"fill-gust absolute flex z-[-1] "
-                + "top-[-64px] right-0 "
-                + "md:top-0 md:left-[-64px] md:right-auto "
-                + "lg:top-0"}>
+        class={"fill-gust absolute flex z-[-1] " +
+                "top-[-64px] right-0 " +
+                "md:top-0 md:left-[-64px] md:right-auto " +
+                "lg:top-0"}>
         <Circle />
       </div>
       <div
-        class={"fill-rameo absolute z-[-1] "
-                + "bottom-[-48px] right-6 "
-                + "md:bottom-0 "
-                + "lg:right-4"}>
+        class={"fill-rameo absolute z-[-1] " +
+                "bottom-[-48px] right-6 " +
+                "md:bottom-0 " +
+                "lg:right-4"}>
         <Polygon />
       </div>
     </div>

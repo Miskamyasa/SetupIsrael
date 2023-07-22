@@ -1,15 +1,15 @@
 ---
-import { useTranslations } from "../../features/i18n"
+import { useTranslations } from "../../features/i18n";
 
 export interface Props {
   white?: boolean
 }
 
-const { white = false } = Astro.props
+const { white = false } = Astro.props;
 
-const { localizePath } = useTranslations(Astro.url)
+const { localizePath } = useTranslations(Astro.url);
 
-const src = white ? "/svg/logo-white.svg" : "/svg/logo.svg"
+const src = white ? "/svg/logo-white.svg" : "/svg/logo.svg";
 
 ---
 

@@ -1,8 +1,8 @@
 ---
-import type { AvailableEvents } from "../../features/events"
-import CTA from "../CTA/CTA.astro"
-import Circle from "../svg/Circle.astro"
-import Polygon from "../svg/Polygon.astro"
+import type { AvailableEvents } from "../../features/events";
+import CTA from "../CTA/CTA.astro";
+import Circle from "../svg/Circle.astro";
+import Polygon from "../svg/Polygon.astro";
 
 export interface Props {
   title: string
@@ -11,7 +11,7 @@ export interface Props {
   ctaEvent: AvailableEvents
 }
 
-const { title, description, cta, ctaEvent } = Astro.props
+const { title, description, cta, ctaEvent } = Astro.props;
 ---
 
 <section
@@ -28,8 +28,8 @@ const { title, description, cta, ctaEvent } = Astro.props
       title="YouTube video player"></iframe> -->
 
     <div
-      class={"fill-rameo absolute bottom-[-64px] right-0 z-[-1] "
-        + "md:right-[-32px] md:bottom-[-5px] lg:right-[-53px]"}
+      class={"fill-rameo absolute bottom-[-64px] right-0 z-[-1] " +
+        "md:right-[-32px] md:bottom-[-5px] lg:right-[-53px]"}
     >
       <Circle />
     </div>
@@ -50,4 +50,5 @@ const { title, description, cta, ctaEvent } = Astro.props
     </div>
   </div>
   <!-- END TEXT -->
+
 </section>

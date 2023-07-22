@@ -1,4 +1,4 @@
-import type { Service, AvailableServices } from "./types"
+import type { Service, AvailableServices } from "./types";
 
 
 const services: Record<AvailableServices, Service> = {
@@ -20,6 +20,6 @@ const services: Record<AvailableServices, Service> = {
     description: "Celebrate your child's Bar Mitzvah in style and create memories!",
     audience: ["business"],
   },
-}
+};
 
-export default services
+export default services;

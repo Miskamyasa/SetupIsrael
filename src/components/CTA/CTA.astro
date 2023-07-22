@@ -1,6 +1,6 @@
 ---
-import type { AvailableEvents } from "../../features/events"
-import Button from "../buttons/Button"
+import type { AvailableEvents } from "../../features/events";
+import Button from "../buttons/Button";
 
 export interface Props {
   title: string
@@ -9,11 +9,13 @@ export interface Props {
   buttonEvent?: AvailableEvents
 }
 
-const { title, description, buttonText, buttonEvent }: Props = Astro.props
+const { title, description, buttonText, buttonEvent }: Props = Astro.props;
 ---
 
 <Fragment>
-  <h2 class="text-4xl font-semibold mb-7 mt-5 md:mt-14 lg:mt-20" contenteditable>{title}</h2>
+  <h2
+    contenteditable
+    class="text-4xl font-semibold mb-7 mt-5 md:mt-14 lg:mt-20">{title}</h2>
   <p contenteditable>{description}</p>
   {
     buttonText ? (

@@ -89,7 +89,7 @@
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/semi": [
             "error",
-            "never"
+            "always"
         ],
         "@typescript-eslint/space-infix-ops": "error",
         "@typescript-eslint/type-annotation-spacing": "error",
@@ -139,7 +139,7 @@
         ],
         "operator-linebreak": [
             "error",
-            "before"
+            "after"
         ],
         "quotes": [
             "error",
@@ -150,11 +150,11 @@
         ],
         "semi": [
             "error",
-            "never"
+            "always"
         ],
         "astro/semi": [
             "error",
-            "never"
+            "always"
         ],
         "import/newline-after-import": [
             "error",
