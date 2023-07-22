@@ -119,6 +119,7 @@
             "error",
             {
                 "allow": [
+                    "info",
                     "warn",
                     "error"
                 ]
@@ -191,7 +192,7 @@
                     "parent",
                     "sibling"
                 ],
-                "newlines-between": "never",
+                "newlines-between": "always",
                 "alphabetize": {
                     "order": "asc",
                     "caseInsensitive": true

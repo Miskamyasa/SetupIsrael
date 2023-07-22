@@ -1,39 +1,41 @@
 ---
+import "./global.css"
 import "@total-typescript/ts-reset"
 import "@fontsource/rubik/variable.css"
-import {useTranslations} from "../../features/i18n"
+
+import { useTranslations } from "../../features/i18n"
 import PartytownScripts from "../partytown/Partytown.astro"
 import SchemaOrg from "../schemes/SchemaOrg.astro"
+
 import Footer from "./Footer.astro"
 import Head from "./Head.astro"
 import Header from "./Header.astro"
 
-const {lang} = useTranslations(Astro.url)
+const { lang } = useTranslations(Astro.url)
 
 ---
 
 <!DOCTYPE html>
 <html
-    dir={lang === "he" ? "rtl" : "ltr"}
-    lang={lang}>
+  dir={lang === "he" ? "rtl" : "ltr"}
+  lang={lang}>
 
-    <Head />
+  <Head />
 
-    <body class="body min-h-screen w-screen flex flex-col overflow-x-hidden antialiased">
+  <body class="body min-h-screen w-screen flex flex-col overflow-x-hidden antialiased">
 
-        <Header />
+    <Header />
 
-        <div class="flex-grow">
-            <slot />
-        </div>
+    <div class="flex-grow">
+      <slot />
+    </div>
 
-        <Footer />
+    <Footer />
 
-        <!-- partytown https://partytown.builder.io/ -->
-        <PartytownScripts />
+    <!-- partytown https://partytown.builder.io/ -->
+    <PartytownScripts />
 
-        <!-- Schema https://schema.org -->
-        <SchemaOrg />
-
-    </body>
+    <!-- Schema https://schema.org -->
+    <SchemaOrg />
+  </body>
 </html>

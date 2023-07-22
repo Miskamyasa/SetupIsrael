@@ -1,62 +1,56 @@
 ---
+import type { AvailableEvents } from "../../features/events"
+import Button from "../buttons/Button"
 import Circle from "../svg/Circle.astro"
 import Polygon from "../svg/Polygon.astro"
 
 export interface Props {
-    title: string
-    description: string
-    src: string
-    onClick: () => void
-    onClickText: string
+  title: string
+  description: string
+  cta: string
+  ctaEvent: AvailableEvents
 }
 
-const {
-    title,
-    description,
-    src,
-    onClick,
-    onClickText,
-} = Astro.props
-
-
+const { title, description, cta, ctaEvent } = Astro.props
 ---
 
 <section
-    class="container py-12 md:py-16 grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-10 md:gap-20"
-    id="promo">
+  class="container py-12 md:py-16 grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-10 md:gap-20"
+  id="promo"
+>
+  <!-- VIDEO -->
+  <div class="relative pb-[56.25%] h-0">
+    <!-- <iframe
+      allowfullscreen
+      allow="autoplay; encrypted-media; picture-in-picture; web-share"
+      class="absolute top-0 left-0 w-full h-full rounded-[2.25rem]"
+      src={src}
+      title="YouTube video player"></iframe> -->
 
-    <!-- VIDEO -->
-    <div class="relative pb-[56.25%] h-0">
-        <iframe
-            allowfullscreen
-            allow="autoplay; encrypted-media; picture-in-picture; web-share"
-            class="absolute top-0 left-0 w-full h-full rounded-[2.25rem]"
-            src={src}
-            title="YouTube video player" />
-
-        <div class={"text-rameo absolute bottom-[-64px] right-0 z-[-1] "
-            + "md:right-[-32px] md:bottom-[-5px] lg:right-[-53px]"}>
-            <Circle />
-        </div>
+    <div
+      class={"rameo absolute bottom-[-64px] right-0 z-[-1] "
+        + "md:right-[-32px] md:bottom-[-5px] lg:right-[-53px]"}
+    >
+      <Circle />
     </div>
-    <!-- END VIDEO -->
+  </div>
+  <!-- END VIDEO -->
 
-    <!-- TEXT -->
-    <div class="relative px-5">
-        <h2 class="my-5">{title}</h2>
-        <p>{description}</p>
-        <div class="mt-5 mb-16">
-            <button
-                class="button bg-mothers"
-                onclick={`(${onClick?.toString()})()`}>
-                {onClickText}
-            </button>
-        </div>
-
-        <div class="text-meraki absolute left-[-1.5rem] top-0 z-[-1] ">
-            <Polygon />
-        </div>
+  <!-- TEXT -->
+  <div class="relative px-5">
+    <h2 class="my-5">{title}</h2>
+    <p>{description}</p>
+    <div class="mt-5 mb-16">
+      <Button
+        client:visible
+        eventName={ctaEvent}>
+        {cta}
+      </Button>
     </div>
-    <!-- END TEXT -->
 
+    <div class="meraki absolute left-[-1.5rem] top-0 z-[-1]">
+      <Polygon />
+    </div>
+  </div>
+  <!-- END TEXT -->
 </section>

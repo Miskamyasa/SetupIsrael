@@ -1,4 +1,5 @@
 import { get } from "lodash"
+
 import englishCommon from "../../locales/en/common.json"
 import englishMenu from "../../locales/en/menu.json"
 import hebrewCommon from "../../locales/he/common.json"
@@ -38,10 +39,10 @@ export type Scope<T extends Record<string, unknown>> = keyof {
 }
 
 
-function getLangFromUrl(url: URL) {
+function getLangFromUrl(url: URL): Locale {
   const [, lang] = url.pathname.split("/")
   if (locales.includes(lang)) {
-    return lang
+    return lang as Locale
   }
   return locales[0]
 }

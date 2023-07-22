@@ -1,84 +1,87 @@
 ---
-import {Image} from "@astrojs/image/components"
+import { Image } from "@astrojs/image/components"
+
+import type { AvailableEvents } from "../../features/events"
+import Button from "../buttons/Button"
 import Circle from "../svg/Circle.astro"
 import Polygon from "../svg/Polygon.astro"
 
 
 export interface Props {
-    title: string
-    description: string
-    image: string
-    onClick: () => void
-    onClickText: string
+  title: string
+  description: string
+  image: string
+  cta: string
+  ctaEvent: AvailableEvents
 }
 
 const {
-    title,
-    description,
-    image,
-    onClick,
-    onClickText,
+  title,
+  description,
+  image,
+  cta,
+  ctaEvent,
 } = Astro.props
 ---
 
 <section
-    class="container pt-5 pb-12 grid grid-rows-1 grid-cols-1 md:grid-cols-2"
-    id="hero">
+  class="container pt-5 pb-12 grid grid-rows-1 grid-cols-1 md:grid-cols-2"
+  id="hero">
 
     <!-- TEXT -->
     <div class="relative">
-        <div class="flex flex-col justify-center md:pr-20 md:pl-10">
-            <h1 class="mb-7 mt-5 md:mt-14 lg:mt-20">{title}</h1>
-            <p>{description}</p>
-            <div class="mt-7 mb-16">
-                <button
-                    class="button"
-                    onclick={`(${onClick?.toString()})()`}>
-                    {onClickText}
-                </button>
-            </div>
+      <div class="flex flex-col justify-center md:pr-20">
+        <h1 class="mb-7 mt-5 md:mt-14 lg:mt-20">{title}</h1>
+        <p>{description}</p>
+        <div class="mt-7 mb-16">
+          <Button
+            client:visible
+            eventName={ctaEvent}>
+            {cta}
+          </Button>
         </div>
-        <div
-            class={"absolute z-[-1] flex gap-5 "
-                + "scale-[0.5] bottom-[-20px] left-[-100px] "
+      </div>
+      <div
+        class={"absolute z-[-1] flex gap-5 "
+                + "scale-[0.5] bottom-[-20px] left-[-50px] "
                 + "md:scale-[0.75] md:left-[-50px]"
-                + "lg:scale-[1] lg:bottom-0 lg:left-[-25px]"}>
-            <img
-                alt="Dots SVG"
-                src="/svg/hero-dots.svg" />
-            <img
-                alt="Dots SVG"
-                src="/svg/hero-dots.svg" />
-        </div>
+                + "lg:scale-[1] lg:bottom-0 lg:left-[-50px]"}>
+        <img
+          alt="Dots SVG"
+          src="/svg/hero-dots.svg" />
+        <img
+          alt="Dots SVG"
+          src="/svg/hero-dots.svg" />
+      </div>
     </div>
     <!-- END TEXT -->
 
     <!-- IMAGE -->
     <div class="relative md:ml-2 mr-[-1.5rem]">
-        <div class="rounded-es-[100px] overflow-hidden">
-            <Image
-                alt="Unleash your potential"
-                class={"float-right"}
-                format="webp"
-                height={480}
-                src={image}
-                width={715}
-            />
-        </div>
-        <div
-            class={"text-gust absolute flex z-[-1] "
+      <div class="rounded-es-[100px] overflow-hidden">
+        <Image
+          alt="Unleash your potential"
+          class={"float-right"}
+          format="webp"
+          height={480}
+          src={image}
+          width={715}
+        />
+      </div>
+      <div
+        class={"gust absolute flex z-[-1] "
                 + "top-[-64px] right-0 "
                 + "md:top-0 md:left-[-64px] md:right-auto "
                 + "lg:top-0"}>
-            <Circle />
-        </div>
-        <div
-            class={"text-rameo absolute z-[-1] "
+        <Circle />
+      </div>
+      <div
+        class={"rameo absolute z-[-1] "
                 + "bottom-[-48px] right-6 "
                 + "md:bottom-0 "
                 + "lg:right-4"}>
-            <Polygon />
-        </div>
+        <Polygon />
+      </div>
     </div>
     <!-- END IMAGE -->
 

@@ -71,6 +71,12 @@ dependencies:
   eslint-plugin-solid:
     specifier: 0.12.1
     version: 0.12.1(eslint@8.44.0)(typescript@5.1.6)
+  eventemitter3:
+    specifier: 5.0.1
+    version: 5.0.1
+  events:
+    specifier: 3.3.0
+    version: 3.3.0
   lodash:
     specifier: 4.17.21
     version: 4.17.21
@@ -2745,6 +2751,10 @@ packages:
   /etag@1.8.1:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
     dev: false
 
   /events@3.3.0:
