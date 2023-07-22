@@ -8,7 +8,12 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 module.exports = {
   content: ["./src/**/*.{astro,html,ts,tsx}"],
   theme: {
-    colors: {},
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: "#000",
+      white: "#fff",
+    },
     fontFamily: {
       sans: ["RubikVariable", "Rubik", ...defaultTheme.fontFamily.sans],
     },

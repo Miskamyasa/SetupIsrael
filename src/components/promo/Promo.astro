@@ -1,6 +1,6 @@
 ---
 import type { AvailableEvents } from "../../features/events"
-import Button from "../buttons/Button"
+import CTA from "../CTA/CTA.astro"
 import Circle from "../svg/Circle.astro"
 import Polygon from "../svg/Polygon.astro"
 
@@ -15,7 +15,7 @@ const { title, description, cta, ctaEvent } = Astro.props
 ---
 
 <section
-  class="container py-12 md:py-16 grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-10 md:gap-20"
+  class="container grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-10 md:gap-20"
   id="promo"
 >
   <!-- VIDEO -->
@@ -28,7 +28,7 @@ const { title, description, cta, ctaEvent } = Astro.props
       title="YouTube video player"></iframe> -->
 
     <div
-      class={"rameo absolute bottom-[-64px] right-0 z-[-1] "
+      class={"fill-rameo absolute bottom-[-64px] right-0 z-[-1] "
         + "md:right-[-32px] md:bottom-[-5px] lg:right-[-53px]"}
     >
       <Circle />
@@ -37,18 +37,15 @@ const { title, description, cta, ctaEvent } = Astro.props
   <!-- END VIDEO -->
 
   <!-- TEXT -->
-  <div class="relative px-5">
-    <h2 class="my-5">{title}</h2>
-    <p>{description}</p>
-    <div class="mt-5 mb-16">
-      <Button
-        client:visible
-        eventName={ctaEvent}>
-        {cta}
-      </Button>
-    </div>
+  <div class="relative md:px-5">
+    <CTA
+      buttonEvent={ctaEvent}
+      buttonText={cta}
+      description={description}
+      title={title}
+    />
 
-    <div class="meraki absolute left-[-1.5rem] top-0 z-[-1]">
+    <div class="fill-meraki absolute left-[-1.5rem] top-0 z-[-1]">
       <Polygon />
     </div>
   </div>

@@ -2,153 +2,212 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    /* colors */
-    --color-primary: #6C5CE7;
-    --color-primary-gradient: linear-gradient(180deg, #8E80EF 0%, #6C5CE7 100%);
+:root {
+  /* colors */
+  --color-primary: #6C5CE7;
+  --color-primary-gradient: linear-gradient(180deg, #8E80EF 0%, #6C5CE7 100%);
 
-    /* text */
-    --color-dark: #565656;
-    --color-dimmed: #757575;
-    --color-white: #FFFFFF;
+  /* text */
+  --color-dark: #565656;
+  --color-dimmed: #757575;
+  --color-white: #FFFFFF;
 
-    /* mothers */
-    --color-mothers: #59CFCF;
-    --color-mothers-gradient: linear-gradient(180deg, #85E4E4 0%, #59CFCF 100%);
+  /* mothers */
+  --color-mothers: #59CFCF;
+  --color-mothers-gradient: linear-gradient(180deg, #85E4E4 0%, #59CFCF 100%);
 
-    /* personal */
-    --color-personal: #FC2C55;
-    --color-personal-gradient: linear-gradient(180deg, #FD5778 0%, #FC2C55 100%);
+  /* personal */
+  --color-personal: #FC2C55;
+  --color-personal-gradient: linear-gradient(180deg, #FD5778 0%, #FC2C55 100%);
 
-    /* business */
-    --color-business: #0A84FF;
-    --color-business-gradient: linear-gradient(180deg, #228EFF 0%, #0A84FF 100%);
+  /* business */
+  --color-business: #0A84FF;
+  --color-business-gradient: linear-gradient(180deg, #228EFF 0%, #0A84FF 100%);
 
-    /* utils */
-    --color-outline: #E0E0E0;
+  /* utils */
+  --color-outline: #E0E0E0;
 
-    /* svg fills */
-    --color-dots-1: #F4F4F4;
-    --color-dots-2: #E7F0FC;
+  /* svg fills */
+  --color-dots-1: #F4F4F4;
+  --color-dots-2: #E7F0FC;
 
-    --color-gust: #DAE9FF;
-    --color-rameo: #FFF5DB;
-    --color-meraki: #FEF4FF;
-  }
+  --color-kiss: #B7AEF7;
+  --color-gust: #D8EBFF;
+  --color-rameo: #EDFEFE;
+  --color-meraki: #FFECEF;
+}
 
+html {
+  font-size: 12px;
+}
+
+/* md */
+@media (min-width: 768px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
+}
 
-  /* md */
-  @media (min-width: 768px) {
-    html {
-      font-size: 14px;
-    }
+/* lg */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
   }
+}
 
-  /* lg */
-  @media (min-width: 1024px) {
-    html {
-      font-size: 16px;
-    }
-  }
+body {
+  color: #020202;
+}
 
-  body {
-    color: #020202;
+h1,
+h2 {
+  color: #020202;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: normal;
+  max-width: 480px;
+}
 
-  }
+p {
+  color: #565656;
+  font-size: 1rem;
+  line-height: 160%;
+  max-width: 560px;
+}
 
-  h1,
-  h2 {
-    color: #020202;
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: normal;
-    max-width: 480px;
-  }
+footer p,
+header p {
+  color: inherit;
+}
 
-  p {
-    color: #565656;
-    font-size: 1rem;
-    line-height: 160%;
-    max-width: 560px;
-  }
+a {
+  transition: 250ms color, 250ms background-color;
+}
 
-  a {
-    transition: 250ms color, 250ms background-color;
-  }
+a,
+input,
+button {
+  outline: none;
+  outline-offset: 2px;
+}
 
-  a,
-  input,
-  button {
-    outline: none;
-    outline-offset: 2px;
-  }
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-outline);
+}
 
-  a:focus-visible,
-  input:focus-visible,
-  button:focus-visible {
-    outline: 2px solid var(--color-outline);
-  }
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 0 auto;
+}
 
-  .gust {
-    fill: var(--color-gust);
-    color: var(--color-gust);
-  }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  .rameo {
-    fill: var(--color-rameo);
-    color: var(--color-rameo);
-  }
+.button {
+  border-radius: 60px;
+  display: inline-flex;
+  padding: 1.25rem 3rem;
+  color: var(--color-bright);
+  cursor: pointer;
+  background: var(--color-primary-gradient);
+  color: var(--color-white);
+}
 
-  .meraki {
-    fill: var(--color-meraki);
-    color: var(--color-meraki);
-  }
+.primary .button {
+  background: var(--color-primary-gradient);
+  color: var(--color-white);
+}
 
-  .container {
-    width: 100%;
-    max-width: 1280px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin: 0 auto;
-  }
+.mothers .button {
+  background: var(--color-mothers-gradient);
+  color: var(--color-white);
+}
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.personal .button {
+  background: var(--color-personal-gradient);
+  color: var(--color-white);
+}
 
-  .button {
-    border-radius: 60px;
-    display: inline-flex;
-    padding: 20px 40px;
-    color: var(--color-bright);
-    cursor: pointer;
-    background: var(--color-primary-gradient);
-    color: var(--color-white);
-  }
+.business .button {
+  background: var(--color-business-gradient);
+  color: var(--color-white);
+}
 
-  .primary .button {
-    background: var(--color-primary-gradient);
-    color: var(--color-white);
-  }
+.fill-business {
+  fill: var(--color-business);
+  color: var(--color-business);
+}
 
-  .mothers .button {
-    background: var(--color-mothers-gradient);
-    color: var(--color-white);
-  }
+.fill-personal {
+  fill: var(--color-personal);
+  color: var(--color-personal);
+}
 
-  .personal .button {
-    background: var(--color-personal-gradient);
-    color: var(--color-white);
-  }
+.fill-mothers {
+  fill: var(--color-mothers);
+  color: var(--color-mothers);
+}
 
-  .business .button {
-    background: var(--color-business-gradient);
-    color: var(--color-white);
-  }
+.fill-gust {
+  fill: var(--color-gust);
+  color: var(--color-gust);
+}
+
+.fill-rameo {
+  fill: var(--color-rameo);
+  color: var(--color-rameo);
+}
+
+.fill-meraki {
+  fill: var(--color-meraki);
+  color: var(--color-meraki);
+}
+
+.bg-business {
+  background: var(--color-gust);
+}
+
+.bg-personal {
+  background: var(--color-meraki);
+}
+
+.bg-mothers {
+  background: var(--color-rameo);
+}
+
+.bg-services:after {
+  content: "";
+  display: block;
+  border-top-left-radius: 20%;
+  position: absolute;
+  top: 10%;
+  left: -2rem;
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  background-size: cover;
+}
+
+.primary .bg-services:after {
+  background-color: var(--color-kiss);
+}
+
+.personal .bg-service:after {
+  background-color: var(--color-meraki);
+}
+
+.business .bg-services:after {
+  background-color: var(--color-gust);
+}
+
+.mothers .bg-services:after {
+  background-color: var(--color-rameo);
 }

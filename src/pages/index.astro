@@ -1,30 +1,42 @@
 ---
-import unleash from "../assets/unleash-your-potential.png"
-import Hero from "../components/hero/Hero.astro"
-import Root from "../components/layout/Root.astro"
-import Promo from "../components/promo/Promo.astro"
+import unleash from "../assets/unleash-your-potential.png";
+import Hero from "../components/hero/Hero.astro";
+import Root from "../components/layout/Root.astro";
+import Promo from "../components/promo/Promo.astro";
+import Services from "../components/services/Services.astro";
 ---
 
 <Root lang={Astro.params.lang}>
   <div class="mb-8 primary">
-    <Hero
-      cta="Contact Now"
-      ctaEvent="contact"
-      description={""
-        + "With us you can find 17 different sets, ranging from a gorgeous room of mirrors, "
-        + "a colorful prison to a professional green screen for video editing."}
-      image={unleash}
-      title="Unlock the Potential of our Space and book it Today!"
-    />
-    <Promo
-      cta="Book birthday party!"
-      ctaEvent="birthday"
-      description={""
-        + "Celebrate your child's Bar Mitzvah in style and create memories that will last a lifetime. "
-        + "We specialize in organizing unforgettable Bar Mitzvah events tailored to your needs. "
-        + "From venue selection to menu planning, entertainment, and decor, our experienced team will "
-        + "handle every detail, ensuring a seamless and joyous celebration."}
-      title="Unforgettable Bar Mitzvah Celebrations"
-    />
+    <div class="">
+      <Hero
+        cta="Contact Now"
+        ctaEvent="contact"
+        description={"" +
+          "With us you can find 17 different sets, ranging from a gorgeous room of mirrors, " +
+          "a colorful prison to a professional green screen for video editing."}
+        image={unleash}
+        title="Unlock the Potential of our Space and book it Today!"
+      />
+    </div>
+    <div class="py-12">
+      <Promo
+        cta="Book birthday party!"
+        ctaEvent="birthday"
+        description={"" +
+          "Celebrate your child's Bar Mitzvah in style and create memories that will last a lifetime. " +
+          "We specialize in organizing unforgettable Bar Mitzvah events tailored to your needs. " +
+          "From venue selection to menu planning, entertainment, and decor, our experienced team will " +
+          "handle every detail, ensuring a seamless and joyous celebration."}
+        title="Unforgettable Bar Mitzvah Celebrations"
+      />
+    </div>
+    <div class="">
+      <Services
+        description="With us you can find 17 different sets, ranging from a gorgeous room of mirrors, a colorful prison to a professional green screen for video editing."
+        slugs={["party", "bat-mitzvah", "corporate"]}
+        title="How can we help you?"
+      />
+    </div>
   </div>
 </Root>

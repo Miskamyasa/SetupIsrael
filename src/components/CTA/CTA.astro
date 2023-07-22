@@ -1,0 +1,29 @@
+---
+import type { AvailableEvents } from "../../features/events"
+import Button from "../buttons/Button"
+
+export interface Props {
+  title: string
+  description: string
+  buttonText?: string
+  buttonEvent?: AvailableEvents
+}
+
+const { title, description, buttonText, buttonEvent }: Props = Astro.props
+---
+
+<Fragment>
+  <h2 class="text-4xl font-semibold mb-7 mt-5 md:mt-14 lg:mt-20" contenteditable>{title}</h2>
+  <p contenteditable>{description}</p>
+  {
+    buttonText ? (
+      <div class="mt-8 mb-16">
+        <Button
+          client:visible
+          eventName={buttonEvent}>
+          {buttonText}
+        </Button>
+      </div>
+    ) : null
+  }
+</Fragment>

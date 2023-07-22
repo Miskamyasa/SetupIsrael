@@ -1,34 +1,25 @@
-import { get } from "lodash"
+import _ from "lodash"
 
 import englishCommon from "../../locales/en/common.json"
 import englishMenu from "../../locales/en/menu.json"
-import hebrewCommon from "../../locales/he/common.json"
-import hebrewMenu from "../../locales/he/menu.json"
-import russianCommon from "../../locales/ru/common.json"
-import russianMenu from "../../locales/ru/menu.json"
 
 
-export const locales = ["en", "ru", "he"] as const
+export const locales = ["en"] as const // , "ru", "he"
 
 export type Locale = typeof locales[number]
 
-const he = {
-  common: hebrewCommon,
-  menu: hebrewMenu,
+const en = {
+  common: englishCommon,
+  menu: englishMenu,
 } as const
 
-export type Translation = typeof he
+export type Translation = typeof en
 
 export const translations: Record<Locale, Translation> = {
   en: {
     common: englishCommon,
     menu: englishMenu,
   },
-  ru: {
-    common: russianCommon,
-    menu: russianMenu,
-  },
-  he,
 }
 
 export type Scope<T extends Record<string, unknown>> = keyof {
@@ -51,11 +42,14 @@ export function useTranslations(url: URL) {
   const lang = getLangFromUrl(url)
 
   const t = (scope: Scope<Translation>) => {
-    return get(translations, `${lang}.${scope}`)
+    return _.get(translations, `${lang}.${scope}`)
   }
 
   const localizePath = (path: string) => {
-    return `/${lang}${path}`
+    return path
+
+    // if (lang === locales[0]) return path
+    // return `/${lang}${path}`
   }
 
   return {
