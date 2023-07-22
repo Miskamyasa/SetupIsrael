@@ -1,0 +1,23 @@
+---
+import {useTranslations} from "../../features/i18n"
+
+export interface Props {
+    white?: boolean
+}
+
+// const {white = false} = Astro.props
+
+const {localizePath} = useTranslations(Astro.url)
+
+// const src = white ? "/svg/logo-white.svg" : "/svg/logo.svg"
+
+---
+
+<a href={localizePath("/")}>
+    <span><span class="font-semibold">SetUp</span> Israel</span>
+    <!-- <img
+        alt="Logo"
+        height="28"
+        src={src}
+        width="112" /> -->
+</a>

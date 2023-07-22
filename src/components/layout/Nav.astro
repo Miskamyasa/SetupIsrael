@@ -1,0 +1,15 @@
+---
+// import {localizePath} from "astro-i18next"
+// import {__t} fro../../../modules/translatorslator"
+import {useTranslations} from "../../features/i18n";
+import MenuItem from "../menu/MenuItem.astro"
+
+const {t, localizePath} = useTranslations(Astro.url)
+
+---
+
+<nav class="mx-4 grow flex">
+    <MenuItem
+        href={localizePath("/about")}
+        text={t("menu.about")} />
+</nav>

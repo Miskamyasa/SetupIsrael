@@ -1,0 +1,23 @@
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 112.2">
+    <defs>
+        <linearGradient id="b" x1="-115.94" y1="690.84" x2="-114.94" y2="690.84"
+            gradientTransform="translate(11810.59 -70315.07) scale(101.87)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#6ccad4" />
+            <stop offset=".08" stop-color="#6ccad4" />
+            <stop offset=".25" stop-color="#8ca6b6" />
+            <stop offset=".56" stop-color="#c06a83" />
+            <stop offset=".78" stop-color="#e14464" />
+            <stop offset=".9" stop-color="#ee3658" />
+            <stop offset="1" stop-color="#ee3658" />
+        </linearGradient>
+        <clipPath id="a">
+            <path
+                d="M.21 17.31C.27 30.21.22 43.1.22 56v38.94a14.86 14.86 0 0 0 .28 3 17.57 17.57 0 0 0 25.61 12c1.4-.76 2.77-1.56 4.15-2.36l22.83-13.17c6.83-4 13.65-8 20.49-11.94 6.57-3.83 13.2-7.56 19.73-11.47a17 17 0 0 0 8.2-17.5A16.61 16.61 0 0 0 93 40.9c-8.71-5.12-17.5-10.17-26.28-15.25Q46.8 14.12 26.9 2.58A18.27 18.27 0 0 0 17.58 0h-.06A17.55 17.55 0 0 0 .21 17.31"
+                style="fill:none" />
+        </clipPath>
+    </defs>
+    <g style="clip-path:url(#a)">
+        <path style="fill:url(#b)" d="M0 0h103v116H0z" />
+    </g>
+</svg>

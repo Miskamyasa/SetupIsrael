@@ -1,0 +1,13 @@
+---
+import Root from "../components/layout/Root.astro";
+import { useTranslations } from "../features/i18n";
+
+const { t } = useTranslations(Astro.url);
+---
+
+<Root>
+  <main class="container mt-6">
+    <h1>{t("common.404title")}</h1>
+    <p class="mt-4">{t("common.404text")}</p>
+  </main>
+</Root>

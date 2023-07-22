@@ -1,15 +1,33 @@
 ---
+import unleash from "../assets/unleash-your-potential.png"
+import Hero from "../components/hero/Hero.astro"
+import Root from "../components/layout/Root.astro"
+import Promo from "../components/promo/Promo.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Root lang={Astro.params.lang}>
+    <main class="mb-8">
+        <Hero
+            description={""
+        + "With us you can find 17 different sets, ranging from a gorgeous room of mirrors, "
+        + "a colorful prison to a professional green screen for video editing."}
+            image={unleash}
+            title="Unlock the Potential of our Space and book it Today!"
+            onClick={() => {
+                // eslint-disable-next-line no-console
+                console.log("clicked")
+            }}
+            onClickText="Contact Now"
+        />
+        <Promo
+            description="Celebrate your child's Bar Mitzvah in style and create memories that will last a lifetime. We specialize in organizing unforgettable Bar Mitzvah events tailored to your needs. From venue selection to menu planning, entertainment, and decor, our experienced team will handle every detail, ensuring a seamless and joyous celebration."
+            src="https://www.youtube.com/embed/RrJy1Vdo2Fg"
+            title="Unforgettable Bar Mitzvah Celebrations"
+            onClick={() => {
+                // eslint-disable-next-line no-console
+                console.log("clicked")
+            }}
+            onClickText="Book birthday party!"
+        />
+    </main>
+</Root>
