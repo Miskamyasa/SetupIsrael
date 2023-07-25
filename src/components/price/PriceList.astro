@@ -1,14 +1,20 @@
 ---
-import CTA from "../CTA/CTA.astro";
+
 import PriceCard from "./PriceCard.astro";
+import CTA from "../CTA/CTA.astro";
+
+import availablePrice from "../../dto/prices";
+import type {AvailablePrices} from "../../dto/types";
 
 
 export interface Props {
   title: string;
   description: string;
-  slugs: string[];
+  slugs: AvailablePrices[];
 }
 const { title, description, slugs }:Props = Astro.props;
+const prices = slugs.map((slug) => availablePrice[slug]);
+console.log(prices);
 ---
 
 <section class="container flex flex-wrap">
@@ -17,10 +23,11 @@ const { title, description, slugs }:Props = Astro.props;
     <CTA description={description} title={title} />
   </div>
   <!-- END TEXT -->
+  <!-- CARDS -->
   <div>
-   {    slugs.map((slug) => ( 
+   {    prices.map((slug) => ( 
     <div>
-        <PriceCard/>
+        <PriceCard {...prices}/>
     </div>
     ))}
   </div>

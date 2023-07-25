@@ -1,0 +1,33 @@
+---
+import Button from "../buttons/Button"
+import type { Price  } from "../../dto/types";
+
+export type Props = Price
+
+const {slug,price, title, description, bulets}:Props = Astro.props
+
+console.log(Astro.props)
+
+---
+
+<Fragment>
+    <div class="price-card flex flex-col justify-center items-center p-10 text-center">
+        <h2>price</h2>
+        <h3 class="mb-4">{title}</h3>
+        <p class="">{description}</p>
+        <Button/>
+        <!-- {bulets.map((bulet) => (
+            <p class="mt-4">{bulet}</p>
+        ))} -->
+      </div>
+</Fragment>
+
+<style>
+    .price-card {
+      background-color: white;
+      border-radius: 3rem;
+      box-shadow: 0 0.8rem 4rem 0 rgba(0, 0, 0, 0.05);
+      min-height: 25rem;
+      min-width: 20rem;
+    }
+</style>
