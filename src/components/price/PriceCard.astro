@@ -11,19 +11,33 @@ const { slug, price, title, description, bulets }: Props = Astro.props;
   <div
     class="price-card flex flex-col  p-10 "
   >
-  <div class="item__price">
-    <span class="item__value"><sup class="item__currency">$</sup>60</span>
+  <div class="text-5xl font-bold">
+    <span class="item__value">60<sup class="item__currency">&#8362</sup></span>
   </div>
-    <CTA
-      description={description}
-      title={title}
-      buttonText={'Book time slot'}
-    />
-    {bulets.map((bulet) => <p class="mt-4">{bulet}</p>)}
+  <div class="cta">
+      <CTA
+        description={description}
+        title={title}
+        buttonText={'Book time slot'}
+      />
+      {bulets.map((bulet) => <p class="">{bulet}</p>)}
+  </div>
   </div>
 </Fragment>
 
 <style>
+    :global(.cta .cta__title){
+      font-size: 1.25rem;
+      line-height: 1.2;
+      margin-top: 1rem;
+    }
+
+    :global(.cta .cta__button button){        
+        width: 100%;
+        justify-content: center;
+    }
+
+          
   .price-card {
     background-color: white;
     border-radius: 3rem;
@@ -31,4 +45,5 @@ const { slug, price, title, description, bulets }: Props = Astro.props;
     min-height: 25rem;
     min-width: 15rem;
   }
+  
 </style>

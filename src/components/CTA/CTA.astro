@@ -15,11 +15,11 @@ const { title, description, buttonText, buttonEvent }: Props = Astro.props;
 <Fragment>
   <h2
     contenteditable
-    class="text-4xl font-semibold mb-7 mt-5 md:mt-14 lg:mt-20">{title}</h2>
+    class="font-semibold mb-7 mt-5 md:mt-14 lg:mt-20 cta__title">{title}</h2>
   <p contenteditable>{description}</p>
   {
     buttonText ? (
-      <div class="mt-8 mb-16">
+      <div class="mt-8 mb-16 cta__button">
         <Button
           client:visible
           eventName={buttonEvent}>
@@ -29,3 +29,10 @@ const { title, description, buttonText, buttonEvent }: Props = Astro.props;
     ) : null
   }
 </Fragment>
+
+<style>
+   .cta__title{
+    font-size: 2.25rem; 
+    line-height: 2.5rem;
+  }
+</style>
