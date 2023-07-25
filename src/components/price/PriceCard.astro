@@ -1,33 +1,34 @@
 ---
-import Button from "../buttons/Button"
-import type { Price  } from "../../dto/types";
+import Button from '../buttons/Button';
+import type { Price } from '../../dto/types';
+import CTA from '../CTA/CTA.astro';
+export type Props = Price;
 
-export type Props = Price
-
-const {slug,price, title, description, bulets}:Props = Astro.props
-
-console.log(Astro.props)
-
+const { slug, price, title, description, bulets }: Props = Astro.props;
 ---
 
 <Fragment>
-    <div class="price-card flex flex-col justify-center items-center p-10 text-center">
-        <h2>price</h2>
-        <h3 class="mb-4">{title}</h3>
-        <p class="">{description}</p>
-        <Button/>
-        <!-- {bulets.map((bulet) => (
-            <p class="mt-4">{bulet}</p>
-        ))} -->
-      </div>
+  <div
+    class="price-card flex flex-col  p-10 "
+  >
+  <div class="item__price">
+    <span class="item__value"><sup class="item__currency">$</sup>60</span>
+  </div>
+    <CTA
+      description={description}
+      title={title}
+      buttonText={'Book time slot'}
+    />
+    {bulets.map((bulet) => <p class="mt-4">{bulet}</p>)}
+  </div>
 </Fragment>
 
 <style>
-    .price-card {
-      background-color: white;
-      border-radius: 3rem;
-      box-shadow: 0 0.8rem 4rem 0 rgba(0, 0, 0, 0.05);
-      min-height: 25rem;
-      min-width: 20rem;
-    }
+  .price-card {
+    background-color: white;
+    border-radius: 3rem;
+    box-shadow: 0 0.8rem 4rem 0 rgba(0, 0, 0, 0.05);
+    min-height: 25rem;
+    min-width: 15rem;
+  }
 </style>
