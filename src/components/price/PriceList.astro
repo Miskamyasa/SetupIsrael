@@ -1,0 +1,28 @@
+---
+import CTA from "../CTA/CTA.astro";
+import PriceCard from "./PriceCard.astro";
+
+
+export interface Props {
+  title: string;
+  description: string;
+  slugs: string[];
+}
+const { title, description, slugs }:Props = Astro.props;
+---
+
+<section class="container flex flex-wrap">
+  <!-- TEXT -->
+  <div class="cta-block relative">
+    <CTA description={description} title={title} />
+  </div>
+  <!-- END TEXT -->
+  <div>
+   {    slugs.map((slug) => ( 
+    <div>
+        <PriceCard/>
+    </div>
+    ))}
+  </div>
+  <!-- CARDS -->
+</section>
