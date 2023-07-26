@@ -8,7 +8,7 @@ export interface Service {
   description: string
   audience: TargetAudience[]
 }
-export type AvailablePrices = "regular" | "premium";
+export type AvailablePrices = "personal" | "business";
 
 export interface Price {
   slug: string

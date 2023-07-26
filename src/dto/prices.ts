@@ -1,7 +1,7 @@
 import type { AvailablePrices, Price } from "./types";
 
 const prices: Record<AvailablePrices, Price> = {
-  regular: {
+  personal: {
     slug: "personal",
     price: 60,
     title: "Personal",
@@ -14,7 +14,7 @@ const prices: Record<AvailablePrices, Price> = {
       "Conference & meeting room",
     ],
   },
-  premium: {
+  business: {
     slug: "business",
     price: 60,
     title: "Business",
