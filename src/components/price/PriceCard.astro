@@ -1,6 +1,6 @@
 ---
-import type { Price } from '../../dto/types';
-import CTA from '../CTA/CTA.astro';
+import type { Price } from "../../dto/types";
+import CTA from "../CTA/CTA.astro";
 
 export type Props = Price;
 
@@ -12,7 +12,7 @@ const { slug, price, title, description, bullets }: Props = Astro.props;
     <h3 class="text-5xl font-bold">{price}&#8362</h3>
     <div class="cta">
       <CTA
-        buttonText={'Book time slot'}
+        buttonText={"Book time slot"}
         description={description}
         title={title}
       />

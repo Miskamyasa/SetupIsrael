@@ -16,7 +16,7 @@ const prices: Record<AvailablePrices, Price> = {
   },
   business: {
     slug: "business",
-    price: 60,
+    price: 80,
     title: "Business",
     description:
       "Good for anyone who is self-employed and just getting started.",
