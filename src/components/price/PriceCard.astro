@@ -1,49 +1,55 @@
 ---
-import Button from '../buttons/Button';
 import type { Price } from '../../dto/types';
 import CTA from '../CTA/CTA.astro';
+
 export type Props = Price;
 
-const { slug, price, title, description, bulets }: Props = Astro.props;
+const { slug, price, title, description, bullets }: Props = Astro.props;
 ---
 
 <Fragment>
-  <div
-    class="price-card flex flex-col  p-10 "
-  >
-  <div class="text-5xl font-bold">
-    <span class="item__value">60<sup class="item__currency">&#8362</sup></span>
-  </div>
-  <div class="cta">
+  <div class="price-card flex flex-col p-10">
+    <h3 class="text-5xl font-bold">{price}&#8362</h3>
+    <div class="cta">
       <CTA
+        buttonText={'Book time slot'}
         description={description}
         title={title}
-        buttonText={'Book time slot'}
       />
-      {bulets.map((bulet) => <p class="">{bulet}</p>)}
-  </div>
+      <ul>
+        {bullets.map((bulet) => <li class="bullets">{bulet}</li>)}
+      </ul>
+    </div>
   </div>
 </Fragment>
 
 <style>
-    :global(.cta .cta__title){
-      font-size: 1.25rem;
-      line-height: 1.2;
-      margin-top: 1rem;
-    }
+  :global(.cta .cta__title) {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-top: 1rem;
+  }
 
-    :global(.cta .cta__button button){        
-        width: 100%;
-        justify-content: center;
-    }
+  :global(.cta .cta__button button) {
+    width: 100%;
+    justify-content: center;
+  }
 
-          
+  :global(.cta .cta__button) {
+    margin: 2rem 0 2rem 0;
+  }
+
   .price-card {
     background-color: white;
     border-radius: 3rem;
     box-shadow: 0 0.8rem 4rem 0 rgba(0, 0, 0, 0.05);
     min-height: 25rem;
-    min-width: 15rem;
+    min-width: 20rem;
   }
-  
+
+  .bullets::before {
+    content: url(/svg/check-circle.svg);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
 </style>

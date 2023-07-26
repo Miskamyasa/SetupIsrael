@@ -1,10 +1,10 @@
 ---
-import banner from "../assets/DI5_8728.jpg";
-import Hero from "../components/hero/Hero.astro";
-import Root from "../components/layout/Root.astro";
-import Promo from "../components/promo/Promo.astro";
-import Services from "../components/services/Services.astro";
-import PriceList from "../components/price/PriceList.astro";
+import banner from '../assets/DI5_8728.jpg';
+import Hero from '../components/hero/Hero.astro';
+import Root from '../components/layout/Root.astro';
+import PriceList from '../components/price/PriceList.astro';
+import Promo from '../components/promo/Promo.astro';
+import Services from '../components/services/Services.astro';
 ---
 
 <Root lang={Astro.params.lang}>
@@ -13,9 +13,9 @@ import PriceList from "../components/price/PriceList.astro";
       <Hero
         cta="Contact Now"
         ctaEvent="contact"
-        description={"" +
-          "With us you can find 17 different sets, ranging from a gorgeous room of mirrors, " +
-          "a colorful prison to a professional green screen for video editing."}
+        description={'' +
+          'With us you can find 17 different sets, ranging from a gorgeous room of mirrors, ' +
+          'a colorful prison to a professional green screen for video editing.'}
         image={banner}
         title="Unlock the Potential of our Space and book it Today!"
       />
@@ -25,25 +25,24 @@ import PriceList from "../components/price/PriceList.astro";
         cta="Book birthday party!"
         ctaEvent="birthday"
         description={"Celebrate your child's Bar Mitzvah in style and create memories that will last a lifetime. " +
-          "We specialize in organizing unforgettable Bar Mitzvah events tailored to your needs. " +
-          "From venue selection to menu planning, entertainment, and decor, our experienced team will " +
-          "handle every detail, ensuring a seamless and joyous celebration."}
+          'We specialize in organizing unforgettable Bar Mitzvah events tailored to your needs. ' +
+          'From venue selection to menu planning, entertainment, and decor, our experienced team will ' +
+          'handle every detail, ensuring a seamless and joyous celebration.'}
         title="Unforgettable Bar Mitzvah Celebrations"
       />
     </div>
     <div class="">
       <Services
-        description={"With us you can find 17 different sets, ranging from a gorgeous room of mirrors, " +
-          "a colorful prison to a professional green screen for video editing."}
-        slugs={["party", "bat-mitzvah", "corporate"]}
+        description={'With us you can find 17 different sets, ranging from a gorgeous room of mirrors, ' +
+          'a colorful prison to a professional green screen for video editing.'}
+        slugs={['party', 'bat-mitzvah', 'corporate']}
         title="How can we help you?"
       />
       <PriceList
-      title="Price List"
-      description={"With us you can find 17 different sets, ranging from a gorgeous room of mirrors, " +
-      "a colorful prison to a professional green screen for video editing."}
-      slugs={["regular", "premium"]}
-       
+        description={'With us you can find 17 different sets, ranging from a gorgeous room of mirrors, ' +
+          'a colorful prison to a professional green screen for video editing.'}
+        slugs={['personal', 'business']}
+        title="Price List"
       />
     </div>
   </div>

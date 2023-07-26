@@ -15,5 +15,5 @@ export interface Price {
   title: string
   description: string
   price: number
-  bulets: string[]
+  bullets: string[]
 }
