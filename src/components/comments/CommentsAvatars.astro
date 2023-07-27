@@ -1,71 +1,39 @@
 ---
 import { Image } from "@astrojs/image/components";
+import clients from "../../dto/clients.js";
+
 ---
+
 <Fragment>
   <div>
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/1.jpg"
-      width="100"
-    />
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/2.jpg"
-      width="100"
-    />
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/3.jpg"
-      width="100"
-    />
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/4.jpg"
-      width="100"
-    />
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/5.jpg"
-      width="100"
-    />
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/6.jpg"
-      width="100"
-    />
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/7.jpg"
-      width="100"
-    />
-    <Image
-      alt="image"
-      class="rounded-full"
-      height="100"
-      position="top"
-      src="./images/8.jpg"
-      width="100"
-    />
+    {
+      clients.map((client) => (
+        <div>
+            <Image
+          alt={client.author.name}
+          class="rounded-full alert cursor-pointer"
+          height="100"
+          position="top"
+          src={client.imageSrc}
+          width="100"
+          id={client.id}
+          
+        />            
+        </div>
+
+      ))
+    }
   </div>
 </Fragment>
+
+<script >
+
+    const buttons = document.querySelectorAll('.alert');
+  
+    buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        console.log(e.target.id)
+        alert('Button was clicked!');
+      });
+    });
+  </script>

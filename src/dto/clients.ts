@@ -5,25 +5,25 @@ const clients: Clients[] = [
     id: 1,
     author: { name: "John", lastName: "Doe" },
     comment: "The place is wonderful and full of charm!",
-    imageSrc: "/public/images/1.jpg",
+    imageSrc: "/images/1.jpg",
   },
   {
     id: 2,
     author: { name: "Jane", lastName: "Smith" },
     comment: "The beauty of this place is unmatched!",
-    imageSrc: "/public/images/2.jpg",
+    imageSrc: "/images/2.jpg",
   },
   {
     id: 3,
     author: { name: "James", lastName: "Brown" },
     comment: "The atmosphere is serene and peaceful.",
-    imageSrc: "/public/images/3.jpg",
+    imageSrc: "/images/3.jpg",
   },
   {
     id: 4,
     author: { name: "Linda", lastName: "Jones" },
     comment: "The location is excellent, central and convenient.",
-    imageSrc: "/public/images/4.jpg",
+    imageSrc: "/images/4.jpg",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const clients: Clients[] = [
     id: 8,
     author: { name: "Susan", lastName: "Taylor" },
     comment: "One of the best places I've visited, highly recommended.",
-    imageSrc: "/public/images8.jpg",
+    imageSrc: "/images/8.jpg",
   },
 ];
 
