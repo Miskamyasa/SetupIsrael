@@ -17,3 +17,10 @@ export interface Price {
   price: number
   bullets: string[]
 }
+
+export interface Clients {
+  id: number
+  author: {name: string, lastName: string}
+  comment: string
+  imageSrc: string
+}
