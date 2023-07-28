@@ -1,12 +1,85 @@
 ---
 import CommentsAvatars from "./CommentsAvatars.astro";
 import CommentsProfile from "./CommentsProfile.astro";
+import { Image } from "@astrojs/image/components";
+import clients from "../../dto/clients.js";
+import { createSignal } from '@astrojs/solid-js';
+
+
+
+// const [currentClient, setCurrentClient] = createSignal<T>(1);
+
+
+
+let currentClient= 0;
 ---
 
-<Fragment>
+<!-- <Fragment>
     <div class="flex">
       <CommentsProfile/>
       <CommentsAvatars/>
     </div>
   </div>
+</Fragment> -->
+
+<Fragment client:load>
+    <div class="flex">
+        <div class="flex">
+            <div>
+              <Image
+                alt="image"
+                class="rounded-full rounded-tr-none"
+                height="400"
+                position="top"
+                src={clients[currentClient].imageSrc}
+                width="400"
+              />
+            </div>
+            <div>
+              <h3>{`${clients[currentClient].author.name} ${clients[currentClient].author.lastName}`}</h3>
+              <p>
+                {clients[currentClient].comment}
+              </p>
+            </div>
+          
+          </div>
+          <div>
+            {
+              clients.map((client) => (
+                <div>
+                    <Image
+                  alt={client.author.name}
+                  class="rounded-full alert cursor-pointer"
+                  height="100"
+                  position="top"
+                  src={client.imageSrc}
+                  width="100"
+                  id={client.id}
+                  
+                />            
+                </div>
+        
+              ))
+            }
+          </div>
+  </div>
 </Fragment>
+
+
+<script is:inline>
+//     function createSignal<T>(
+//   initialValue: T,
+//   options?: { equals?: false | ((prev: T, next: T) => boolean) }
+// ): [get: () => T, set: (v: T) => T];
+    const [currentClient, setCurrentClient] = createSignal<number>(1);
+    const buttons = document.querySelectorAll('.alert'); 
+    buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        console.log(e.target.id)
+        const clientIndex = clients.findIndex(client => client.id === id);
+        setCurrentClient(clientIndex);
+        alert('Button was clicked!');
+        console.log(currentClient)
+      });
+    });
+</script>

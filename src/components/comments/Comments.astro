@@ -2,6 +2,7 @@
 import CTA from "../CTA/CTA.astro";
 
 import CommentsSlider from "./CommentsSlider.astro";
+import SliderTest from "./SliderTest.tsx";
 
 export interface Props {
   title: string
@@ -17,7 +18,8 @@ const { title, description }: Props = Astro.props;
       description={description}
       title={title} />
   </div>
-  <div>
-    <CommentsSlider />
+  <div class="w-full">
+    <!-- <CommentsSlider /> -->
+    <SliderTest client:load/>
   </div>
 </section>
