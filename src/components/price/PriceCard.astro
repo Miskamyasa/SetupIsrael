@@ -8,7 +8,7 @@ const { slug, price, title, description, bullets }: Props = Astro.props;
 ---
 
 <Fragment>
-  <div class="price-card flex flex-col p-10">
+  <div class="price-card flex flex-col px-8 py-10">
     <h3 class="text-5xl font-bold">{price}&#8362</h3>
     <div class="cta">
       <CTA
@@ -47,9 +47,17 @@ const { slug, price, title, description, bullets }: Props = Astro.props;
     min-width: 20rem;
   }
 
+  .bullets {
+    color: var(--color-dark);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
   .bullets::before {
+    display: flex;
+    align-items: center;
     content: url(/svg/check-circle.svg);
-    vertical-align: middle;
     margin-right: 0.5rem;
   }
 </style>
