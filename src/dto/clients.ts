@@ -13,7 +13,7 @@ const clients: Clients[] = [
     id: 2,
     author: { name: "Jane", lastName: "Smith" },
     comment:
-      "The beauty of this place is unmatched! From the architectural elegance to the breathtaking views," + 
+      "The beauty of this place is unmatched! From the architectural elegance to the breathtaking views," +
       " everything is stunning. A must-visit location!",
     imageSrc: "/images/2.jpg",
   },
@@ -21,7 +21,7 @@ const clients: Clients[] = [
     id: 3,
     author: { name: "James", lastName: "Brown" },
     comment:
-      "The atmosphere is serene and peaceful. It's the perfect getaway " + 
+      "The atmosphere is serene and peaceful. It's the perfect getaway " +
       "from the daily hustle and bustle. Truly a paradise on Earth.",
     imageSrc: "/images/3.jpg",
   },
@@ -29,7 +29,7 @@ const clients: Clients[] = [
     id: 4,
     author: { name: "Linda", lastName: "Jones" },
     comment:
-      "The location is excellent, central and convenient. You're never too far away " + 
+      "The location is excellent, central and convenient. You're never too far away " +
       "from anything you need, yet it still feels tranquil and secluded. Perfectly balanced.",
     imageSrc: "/images/4.jpg",
   },
@@ -37,9 +37,9 @@ const clients: Clients[] = [
     id: 5,
     author: { name: "Robert", lastName: "Johnson" },
     comment:
-      "The place has a great vibe, very welcoming! Everyone is friendly and" + 
+      "The place has a great vibe, very welcoming! Everyone is friendly and" +
       " it feels like a close-knit community. It's a home away from home.",
-    imageSrc: "/public/images/5.jpg",
+    imageSrc: "/images/5.jpg",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const clients: Clients[] = [
     comment:
       "The views from this place are breathtaking. Waking up to such scenes is a delight, " +
       "and it's something I'll always remember. It's nature at its finest.",
-    imageSrc: "/public/images/6.jpg",
+    imageSrc: "/images/6.jpg",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ const clients: Clients[] = [
     comment:
       "A gem of a place! Can't wait to return. The amenities are top-notch and the " +
       "overall ambience is warm and inviting. A stellar experience!",
-    imageSrc: "/public/images/7.jpg",
+    imageSrc: "/images/7.jpg",
   },
   {
     id: 8,
