@@ -17,7 +17,7 @@ export default function SliderTest() {
           <div class="w-3/6">
             <img
               alt="image"
-              class="rounded-full rounded-tr-none w-96 h-96  object-cover object-top"
+              class="transition ease-in duration-200  rounded-full rounded-tr-none w-96 h-96  object-cover object-top"
               src={clients[currentClient()].imageSrc}
             />
           </div>
@@ -37,7 +37,8 @@ export default function SliderTest() {
               >
                 <img
                   alt="image"
-                  class={`image-${client.id} rounded-full   cursor-pointer object-cover object-top`}
+                  class={`image-${client.id} rounded-full hover:scale-125 transition
+                   ease-in-out duration-300 cursor-pointer object-cover object-top`}
                   src={client.imageSrc}
                 />
               </div>
