@@ -12,7 +12,7 @@ export default function SliderTest() {
 
   return (
     <div>
-      <div class="flex slider">
+      <div class="flex slider mt-7">
         <div class="flex w-9/12 ">
           <div class="w-3/6">
             <img
