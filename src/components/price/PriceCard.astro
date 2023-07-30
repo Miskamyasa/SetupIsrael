@@ -1,7 +1,7 @@
 ---
 import type { Price } from "../../dto/types";
-import CTA from "../CTA/CTA.astro";
-
+import Button from "../buttons/Button";
+import { Icon } from "astro-icon";
 export type Props = Price;
 
 const { slug, price, title, description, bullets }: Props = Astro.props;
@@ -10,33 +10,34 @@ const { slug, price, title, description, bullets }: Props = Astro.props;
 <Fragment>
   <div class="price-card flex flex-col p-10">
     <h3 class="text-5xl font-bold">{price}&#8362</h3>
-    <div class="cta">
-      <CTA
-        buttonText={"Book time slot"}
-        description={description}
-        title={title}
-      />
+    <div>
+      <h2 contenteditable class="font-semibold mb-4 mt-4 text-xl">
+        {title}
+      </h2>
+      <p contenteditable>{description}</p>
+      <div class={`${slug} my-4`}>
+        <Button>Book time slot</Button>
+      </div>
       <ul>
-        {bullets.map((bullet) => <li class="bullets">{bullet}</li>)}
+        {
+          bullets.map((bullet) => (
+            <li class="bullets">
+              <div class="bullet-icon">
+                <Icon pack="uil" name="check-circle" class={`fill-${slug}`} />
+              </div>
+              {bullet}
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
 </Fragment>
 
 <style>
-  :global(.cta .cta__title) {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    margin-top: 1rem;
-  }
-
-  :global(.cta .cta__button button) {
+  :global(.price-card .button) {
     width: 100%;
     justify-content: center;
-  }
-
-  :global(.cta .cta__button) {
-    margin: 2rem 0 2rem 0;
   }
 
   .price-card {
@@ -47,9 +48,14 @@ const { slug, price, title, description, bullets }: Props = Astro.props;
     min-width: 20rem;
   }
 
-  .bullets::before {
-    content: url(/svg/check-circle.svg);
-    vertical-align: middle;
+  .bullets {
+    display: flex;
+    align-items: start;
+    margin-bottom: 0.75rem;
+  }
+
+  .bullet-icon {
+    width: 1.5rem;
     margin-right: 0.5rem;
   }
 </style>

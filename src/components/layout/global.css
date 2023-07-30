@@ -115,9 +115,9 @@ button:focus-visible {
   border-radius: 60px;
   display: inline-flex;
   padding: 1.25rem 3rem;
-  color: var(--color-bright);
+  /* color: var(--color-bright); */
   cursor: pointer;
-  background: var(--color-primary-gradient);
+  /* background: var(--color-primary-gradient); */
   color: var(--color-white);
 }
 
