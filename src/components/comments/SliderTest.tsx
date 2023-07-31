@@ -11,23 +11,23 @@ export default function SliderTest() {
   };
 
   return (
-    <div class="flex slider mt-7 flex-col md:flex-row">
-      <div class="flex md:w-9/12 flex-col md:flex-row items-center md:items-start">
-        <div class="md:w-3/6 order-last md:order-first">
+    <div class="flex slider mt-7 flex-col lg:flex-row">
+      <div class="flex lg:w-9/12 flex-col lg:flex-row items-center lg:items-start">
+        <div class="lg:w-3/6 order-last lg:order-first">
           <img
             alt="image"
             class=" rounded-full rounded-tr-none w-96 h-96  object-cover object-top"
             src={clients[currentClient()].imageSrc}
           />
         </div>
-        <div class="md:w-3/6">
+        <div class="lg:w-3/6">
           <h3>{`${clients[currentClient()].author.name} ${
             clients[currentClient()].author.lastName
           }`}</h3>
           <p>{clients[currentClient()].comment}</p>
         </div>
       </div>
-      <div class="md:w-3/12 md:grid md:grid-cols-5 md:grid-rows-auto md:gap-2 flex justify-center">
+      <div class="lg:w-3/12 lg:grid lg:grid-cols-5 lg:grid-rows-auto lg:gap-2 flex justify-center">
         <For each={clients}>
           {(client, index) => (
             <div

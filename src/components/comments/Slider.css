@@ -2,8 +2,9 @@
 .avatar__size {
   width: 3rem;
   height: 3rem;
+  margin: 0.5rem;
 }
-@media (min-width: 768px) { 
+@media (min-width: 1024px) { 
 
   .image__container-1 {
     grid-column: 3 / span 2;
