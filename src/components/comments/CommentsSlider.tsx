@@ -3,6 +3,7 @@ import { createSignal, For } from "solid-js";
 import "./CommentsSlider.css";
 import clients from "../../dto/clients.js";
 
+
 export default function CommentsSlider() {
   const [currentClient, setCurrentClient] = createSignal(0);
   const handleClick = (index: () => number): void => {

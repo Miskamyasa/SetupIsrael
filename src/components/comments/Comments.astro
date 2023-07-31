@@ -1,22 +1,27 @@
 ---
 import CTA from "../CTA/CTA.astro";
+
 import CommentsSlider from "./CommentsSlider.tsx";
 
 export interface Props {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
 const { title, description }: Props = Astro.props;
 ---
 
 <section class="container">
+  <!-- Text -->
   <div class="flex flex-col items-center">
-    <CTA description={description} title={title} />
+    <CTA
+      description={description}
+      title={title} />
   </div>
+  <!-- End Text -->
   <!--  Slider -->
   <div class="w-full">
     <CommentsSlider client:load />
   </div>
+  <!-- End Slider -->
 </section>
-
