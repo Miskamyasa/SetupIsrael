@@ -1,9 +1,9 @@
 import { createSignal, For } from "solid-js";
 
-import "./Slider.css";
+import "./CommentsSlider.css";
 import clients from "../../dto/clients.js";
 
-export default function SliderTest() {
+export default function CommentsSlider() {
   const [currentClient, setCurrentClient] = createSignal(0);
   const handleClick = (index: () => number): void => {
     const id = index();
@@ -13,7 +13,7 @@ export default function SliderTest() {
   return (
     <div class="flex slider mt-7 flex-col lg:flex-row">
       <div class="flex lg:w-9/12 flex-col lg:flex-row items-center lg:items-start">
-        <div class="lg:w-3/6 order-last lg:order-first">
+        <div class="lg:w-3/6 order-last lg:order-first my-8 lg:my-0">
           <img
             alt="image"
             class=" rounded-full rounded-tr-none w-96 h-96  object-cover object-top"
