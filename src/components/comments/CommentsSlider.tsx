@@ -13,7 +13,19 @@ export default function CommentsSlider() {
   return (
     <div class="flex  mt-7 flex-col lg:flex-row">
       <div class="flex lg:w-8/12 flex-col lg:flex-row items-center lg:items-start">
-        <div class="lg:w-3/6 order-last lg:order-first my-8 lg:my-0 lg:mr-3">
+        <div class="lg:w-3/6 order-last lg:order-first my-8 lg:my-0 lg:mr-3 relative z-4">
+          <div class="w-full">
+            <img 
+              alt="dots" 
+              class="absolute z-[-1] lg:right-14 -right-6 -top-7"
+              src="./svg/hero-dots.svg"
+            />
+            <img 
+              alt="ellipse" 
+              class="absolute z-[-1] -left-6 bottom-7"
+              src="./svg/ellipse.svg"
+            />
+          </div>
           <img
             alt="image"
             class=" rounded-full rounded-tr-none w-96 h-96  object-cover object-top"
