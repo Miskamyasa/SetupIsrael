@@ -13,7 +13,7 @@ export default function CommentsSlider() {
   return (
     <div class="flex  mt-7 flex-col lg:flex-row">
       <div class="flex lg:w-8/12 flex-col lg:flex-row items-center lg:items-start">
-        <div class="lg:w-3/6 order-last lg:order-first my-8 lg:my-0 lg:mr-3 relative z-4">
+        <div class="lg:w-3/6 my-8 lg:my-0 lg:mr-3 relative z-4">
           <div class="w-full">
             <img 
               alt="dots" 
@@ -32,7 +32,7 @@ export default function CommentsSlider() {
             src={clients[currentClient()].imageSrc}
           />
         </div>
-        <div class="lg:w-3/6 lg:mt-10 text-center lg:text-left">
+        <div class="lg:w-3/6 lg:mt-10 text-center lg:text-left md:mb-6">
           <h3 class="text-2xl font-semibold">{`${
             clients[currentClient()].author.name
           } ${clients[currentClient()].author.lastName}`}</h3>
