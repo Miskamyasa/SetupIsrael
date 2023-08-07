@@ -2,7 +2,7 @@ import image from "@astrojs/image"
 import node from "@astrojs/node"
 import partytown from "@astrojs/partytown"
 import sitemap from "@astrojs/sitemap"
-import solidJs from "@astrojs/solid-js"
+import solid from "@astrojs/solid-js"
 import tailwind from "@astrojs/tailwind"
 import { defineConfig } from "astro/config"
 import { loadEnv } from "vite"
@@ -32,7 +32,7 @@ export default defineConfig({
   //     mode: "middleware",
   // }),
   integrations: [
-    solidJs(),
+    solid(),
     tailwind(),
     sitemap(),
     partytown({
