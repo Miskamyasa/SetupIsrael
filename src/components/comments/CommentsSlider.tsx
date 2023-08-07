@@ -28,7 +28,7 @@ export default function CommentsSlider() {
           </div>
           <img
             alt="image"
-            class=" rounded-full rounded-tr-none w-96 h-96  object-cover object-top"
+            class=" rounded-full rounded-tr-none w-96 h-96  object-cover object-top "
             src={clients[currentClient()].imageSrc}
           />
         </div>
