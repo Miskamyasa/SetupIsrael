@@ -27,6 +27,7 @@
         "@typescript-eslint/parser": "6.1.0",
         "astro": "2.9.1",
         "astro-i18n-aut": "0.0.17",
+        "astro-icon": "0.8.1",
         "eslint": "8.45.0",
         "eslint-import-resolver-typescript": "3.5.5",
         "eslint-plugin-astro": "0.27.2",

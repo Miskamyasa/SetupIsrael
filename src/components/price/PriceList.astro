@@ -1,0 +1,90 @@
+---
+import availablePrice from "../../dto/prices";
+import type { AvailablePrices } from "../../dto/types";
+import CTA from "../CTA/CTA.astro";
+
+import PriceCard from "./PriceCard.astro";
+
+export interface Props {
+  title: string
+  description: string
+  slugs: AvailablePrices[]
+}
+const { title, description, slugs }: Props = Astro.props;
+const prices = slugs.map((slug) => availablePrice[slug]);
+---
+
+<section class="container flex flex-wrap pt-10">
+  <!-- TEXT -->
+  <div class="cta-block">
+    <CTA
+      description={description}
+      title={title} />
+  </div>
+  <!-- END TEXT -->
+
+  <!-- CARDS -->
+  <div class="cards-grid">
+    {
+      prices.map((el) => (
+        <div class="card">
+          <PriceCard {...el} />
+        </div>
+      ))
+    }
+  </div>
+  <!-- CARDS -->
+</section>
+
+<style>
+  .cta-block {
+    width: 100%;
+  }
+
+  .cards-grid {
+    margin-top: 5rem;
+    display: grid;
+    width: 100%;
+    place-content: center;
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .cta-block {
+      width: 32%;
+      padding-right: 5rem;
+      align-self: center;
+    }
+
+    .cards-grid {
+      margin-top: 0;
+      width: 68%;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+    }
+
+    .card {
+      max-width: 30rem;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .cta-block {
+      width: 35%;
+    }
+
+    .cards-grid {
+      width: 65%;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    .cta-block {
+      width: 40%;
+    }
+
+    .cards-grid {
+      width: 60%;
+    }
+  }
+</style>

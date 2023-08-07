@@ -8,3 +8,12 @@ export interface Service {
   description: string
   audience: TargetAudience[]
 }
+export type AvailablePrices = "personal" | "business";
+
+export interface Price {
+  slug: string
+  title: string
+  description: string
+  price: number
+  bullets: string[]
+}

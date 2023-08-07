@@ -8,6 +8,7 @@ import { events, type AvailableEvents } from "../../features/events";
 interface ButtonProps extends ParentProps {
   eventName?: AvailableEvents
   eventParams?: Record<string, unknown>
+  color?: string
 }
 
 export default function Button(props: ButtonProps) {

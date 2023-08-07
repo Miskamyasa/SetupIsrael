@@ -1,0 +1,61 @@
+---
+import type { Price } from "../../dto/types";
+import Button from "../buttons/Button";
+import { Icon } from "astro-icon";
+export type Props = Price;
+
+const { slug, price, title, description, bullets }: Props = Astro.props;
+---
+
+<Fragment>
+  <div class="price-card flex flex-col px-8 py-10">
+    <h3 class="text-5xl font-bold">{price}&#8362</h3>
+    <div>
+      <h2 contenteditable class="font-semibold mb-4 mt-4 text-xl">
+        {title}
+      </h2>
+      <p contenteditable>{description}</p>
+      <div class={`${slug} my-4`}>
+        <Button>Book time slot</Button>
+      </div>
+      <ul>
+        {
+          bullets.map((bullet) => (
+            <li class="bullets">
+              <div class="bullet-icon">
+                <Icon pack="uil" name="check-circle" class={`fill-${slug}`} />
+              </div>
+              {bullet}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Fragment>
+
+<style>
+  :global(.price-card .button) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .price-card {
+    background-color: white;
+    border-radius: 3rem;
+    box-shadow: 0 0.8rem 4rem 0 rgba(0, 0, 0, 0.05);
+    min-height: 25rem;
+    min-width: 20rem;
+  }
+
+  .bullets {
+    display: flex;
+    align-items: start;
+    margin-bottom: 0.75rem;
+  }
+
+  .bullet-icon {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
+</style>
