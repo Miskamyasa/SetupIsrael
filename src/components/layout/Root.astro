@@ -20,7 +20,9 @@ const { lang } = useTranslations(Astro.url);
   
     dir={lang === "he" ? "rtl" : "ltr"} 
   lang={lang}> -->
-<html lang={i18next.language}>
+<html lang={i18next.language}
+dir={i18next.language === "he" ? "rtl" : "ltr"}
+>
   <Head />
 
   <body class="body min-h-screen w-screen flex flex-col overflow-x-hidden antialiased">
