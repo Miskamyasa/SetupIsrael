@@ -1,10 +1,26 @@
 {
     "site": {
-      "title": "Unlock the Potential of our Space and book it Today!",
-      "description": "Here is the description of my awesome website!"
+        "title": "Welcome to Set Up - A World of Content Creation and Experiences",
+        "description": "A fascinating realm of unique locations for photography, content creation for social networks, and event production"
     },
-    "home": {
-      "title": "Welcome to my awesome website!",
-      "subtitle": "This is a <0>more complex</0> string to translate, mixed with <1>html elements</1>, such as a <2>a cool link</2>!"
+    "cta": {
+      "contactNow": "Schedule a Visit",
+      "bookBirthdayParty": "Book a Birthday Party!"
+    },
+    "promo": {
+      "title": "Your translated Hebrew content for promo description.",
+      "description": "Your translated Hebrew title for Bar Mitzvah Celebrations."
+    },
+    "services": {
+      "title": "The Unique Photography Area in Israel",
+      "description": "We provide a range of services for creating unforgettable experiences and memories."
+    },
+    "pricelist": {
+      "title": "Your translated Hebrew content for pricelist description.",
+      "description": "Your translated Hebrew title for Price List."
+    },
+    "comments": {
+      "title": "Customers Testify",
+      "description": "Your translated Hebrew title for what our happy clients say."
     }
-  }
+}

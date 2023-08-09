@@ -2,6 +2,6 @@
 
 const exportedObject = {
   defaultLocale: "he",
-  locales: ["ru", "en"],
+  locales: ["ru", "en", "he"],
 };
 export default exportedObject;

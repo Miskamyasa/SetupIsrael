@@ -1,9 +1,27 @@
 {
     "site": {
-      "title": "שלום",
-      "description": "גכעכע"
+        "title": "ברוכים הבאים ל - Set Up עולם של יצירת תוכן וחוויות",
+        "description": "מתחם מרהיב של לוקיישנים ייחודיים לצילום, יצירת תוכן לרשתות חברתיות והפקת אירועים"
     },
-    "home": {
-      "title": "גכעג",
-      "subtitle": "גכעגכע"    }
+    "cta": {
+      "contactNow": "לתאם ביקור",
+      "bookBirthdayParty": "הזמן מסיבת יומולדת!"
+    },
+    "promo": {
+      "title": "Your translated Hebrew content for promo description.",
+      "description": "Your translated Hebrew title for Bar Mitzvah Celebrations."
+    },
+    "services": {
+      "title": "מתחם הצילום הייחודי בישראל",
+      "description": ".אנחנו מספקים מגוון שירותים ליצירת חוויות וזכרונות בלתי נשכחים"
+    },
+    "pricelist": {
+      "title": "Your translated Hebrew content for pricelist description.",
+      "description": "Your translated Hebrew title for Price List."
+    },
+    "comments": {
+      "title": "לקוחות מספרים",
+      "description": "Your translated Hebrew title for what our happy clients say."
+    }
   }
+  

@@ -6,50 +6,46 @@ import Root from "../components/layout/Root.astro";
 import PriceList from "../components/price/PriceList.astro";
 import Promo from "../components/promo/Promo.astro";
 import Services from "../components/services/Services.astro";
-import { t } from "i18next";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("he");
 ---
 
 <Root lang={Astro.params.lang}>
   <div class="mb-8 primary">
     <div class="">
       <Hero
-        cta="Contact Now"
+        cta={t("cta.contactNow")}
         ctaEvent="contact"
-        description={"" +
-          "With us you can find 17 different sets, ranging from a gorgeous room of mirrors, " +
-          "a colorful prison to a professional green screen for video editing."}
+        description={t("site.description")}
         image={banner}
         title={t("site.title")}
       />
     </div>
     <div class="py-12">
       <Promo
-        cta="Book birthday party!"
+        cta={t("cta.bookBirthdayParty")}
         ctaEvent="birthday"
-        description={"Celebrate your child's Bar Mitzvah in style and create memories that will last a lifetime. " +
-          "We specialize in organizing unforgettable Bar Mitzvah events tailored to your needs. " +
-          "From venue selection to menu planning, entertainment, and decor, our experienced team will " +
-          "handle every detail, ensuring a seamless and joyous celebration."}
-        title="Unforgettable Bar Mitzvah Celebrations"
+        description={t("promo.description")}
+        title={t("promo.title")}
       />
     </div>
     <div class="">
       <Services
-        description={"With us you can find 17 different sets, ranging from a gorgeous room of mirrors, " +
-          "a colorful prison to a professional green screen for video editing."}
+        description={t("services.description")}
         slugs={["party", "bat-mitzvah", "corporate"]}
-        title="How can we help you?"
+        title={t("services.title")}
       />
       <PriceList
-        description={"With us you can find 17 different sets, ranging from a gorgeous room of mirrors, " +
-          "a colorful prison to a professional green screen for video editing."}
+        description={t("pricelist.description")}
         slugs={["personal", "business"]}
-        title="Price List"
+        title={t("pricelist.title")}
       />
       <Comments
-        description="Hear how we helped parents just like you create the perfect celebration for their child."
-        title="What our happy clien say"
+        description={t("comments.description")}
+        title={t("comments.title")}
       />
     </div>
   </div>
 </Root>
+
