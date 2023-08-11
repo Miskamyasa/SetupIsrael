@@ -1,12 +1,14 @@
 ---
-// import {LanguageSelector} from "astro-i18next/components"
+import { LanguageSelector } from "astro-i18next/components";
 import Logo from "../logo/Logo.astro";
+
 ---
+
 <div class="shrink-0">
-  <header class="py-9 relative z-20 container row gap-2">
+  <header class="py-9 relative z-20 container row justify-between">
     <Logo />
-    <!-- <LanguageSelector
-        class="outlined appearance-none text-sm rounded-sm block py-1 px-2 bg-slate-200 text-slate-800"
-        showFlag={true} /> -->
+    <LanguageSelector
+      class="outlined appearance-none text-sm rounded-sm block py-1 px-2 bg-slate-200 text-slate-800"
+      showFlag={true} />
   </header>
 </div>

@@ -1,26 +1,28 @@
 ---
 import "./global.css";
 import "@fontsource/rubik/variable.css";
-
+// import PartytownScripts from "../partytown/Partytown.astro";
+// import SchemaOrg from "../schemes/SchemaOrg.astro";
 import i18next from "i18next";
-
-import PartytownScripts from "../partytown/Partytown.astro";
-import SchemaOrg from "../schemes/SchemaOrg.astro";
-
 import Footer from "./Footer.astro";
 import Head from "./Head.astro";
 import Header from "./Header.astro";
+
+
+const lang = i18next.language;
+const dir = lang === "he" ? "rtl" : "ltr";
+const bodyClass = "body min-h-screen w-screen flex flex-col overflow-x-hidden antialiased " + dir;
 
 ---
 
 <!DOCTYPE html>
 <html
-  dir={i18next.language === "he" ? "rtl" : "ltr"}
-  lang={i18next.language}
+  dir={dir}
+  lang={lang}
 >
   <Head />
 
-  <body class="body min-h-screen w-screen flex flex-col overflow-x-hidden antialiased">
+  <body class={bodyClass}>
     <Header />
 
     <div class="flex-grow">
@@ -30,9 +32,9 @@ import Header from "./Header.astro";
     <Footer />
 
     <!-- partytown https://partytown.builder.io/ -->
-    <PartytownScripts />
+    <!-- <PartytownScripts /> -->
 
     <!-- Schema https://schema.org -->
-    <SchemaOrg />
+    <!-- <SchemaOrg /> -->
   </body>
 </html>

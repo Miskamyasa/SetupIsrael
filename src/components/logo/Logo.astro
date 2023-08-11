@@ -1,22 +1,28 @@
 ---
-import { useTranslations } from "../../features/i18n";
+import { localizePath } from "astro-i18next";
 
 export interface Props {
-  white?: boolean
+  footer?: boolean
 }
 
-const { white = false } = Astro.props;
+const { footer = false } = Astro.props;
 
-const { localizePath } = useTranslations(Astro.url);
-
-const src = white ? "/svg/logo-white.svg" : "/svg/logo.svg";
+const src = footer ? "/svg/logo-white.svg" : "/svg/logo.svg";
 
 ---
 
 <a href={localizePath("/")}>
   <img
     alt="Logo"
-    height="28"
-    src={src}
-    width="112" />
+    class={"logo" + (footer ? " in-footer" : "")}
+    src={src} />
 </a>
+
+<style>
+  .logo {
+    width: 112px;
+  }
+  .in-footer {
+    width: 160px;
+  }
+</style>

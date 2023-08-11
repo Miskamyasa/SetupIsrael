@@ -1,28 +1,9 @@
-import _ from "lodash";
+import { t } from "i18next";
+import { get } from "lodash";
+import { Locale, locales, translations, type Translation } from "../../locales";
 
-import englishCommon from "../../locales/en/common.json";
-import englishMenu from "../../locales/en/menu.json";
 
-
-export const locales = ["en"] as const; // , "ru", "he"
-
-export type Locale = typeof locales[number];
-
-const en = {
-  common: englishCommon,
-  menu: englishMenu,
-} as const;
-
-export type Translation = typeof en;
-
-export const translations: Record<Locale, Translation> = {
-  en: {
-    common: englishCommon,
-    menu: englishMenu,
-  },
-};
-
-export type Scope<T extends Record<string, unknown>> = keyof {
+type Scope<T extends Record<string, unknown>> = keyof {
   [K in keyof T as T[K] extends string
     ? K
     : T[K] extends Record<string, unknown>
@@ -30,31 +11,30 @@ export type Scope<T extends Record<string, unknown>> = keyof {
 };
 
 
-function getLangFromUrl(url: URL): Locale {
-  const [, lang] = url.pathname.split("/");
-  if (locales.includes(lang as Locale)) {
-    return lang as Locale;
+function onError(scope: Scope<Translation>, result: unknown, locale: Locale): string {
+  const err = JSON.stringify({ locale, scope, result }, null, 2);
+  throw Error(`Translations error: \n ${err}`);
+}
+
+function checkTranslations(scope: Scope<Translation>): void {
+  setTimeout(() => {
+    locales.forEach((locale) => {
+      const tr: unknown = get(translations[locale], scope);
+      if (!tr || typeof tr == "object") {
+        onError(scope, tr || "Missing translation", locale);
+      }
+    });
+  }, 1);
+}
+
+
+export function __t(scope: Scope<Translation>) {
+  if (import.meta.env.MODE === "development") {
+    checkTranslations(scope);
   }
-  return locales[0];
+  const [ns, ...keys] = scope.split(".");
+  return t(`${ns}:${keys.join(".")}`);
 }
 
-export function useTranslations(url: URL) {
-  const lang = getLangFromUrl(url);
-
-  const t = (scope: Scope<Translation>) => {
-    return _.get(translations, `${lang}.${scope}`);
-  };
-
-  const localizePath = (path: string) => {
-    return path;
-
-    // if (lang === locales[0]) return path
-    // return `/${lang}${path}`
-  };
-
-  return {
-    lang,
-    t,
-    localizePath,
-  };
-}
+// dynamic values
+export const __td = (scope: string): string => __t(scope as Scope<Translation>);

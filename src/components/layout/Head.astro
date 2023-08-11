@@ -1,13 +1,16 @@
 ---
-// FIXME: import {HeadHrefLangs} from "astro-i18next/components"
+import { HeadHrefLangs } from "astro-i18next/components";
 import Favicon from "../favicon/Favicon.astro";
 
-// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 let title = "SetUp Israel";
 let description = "SetUp Israel";
 
 const image = "/static-logo.png";
+
+const { status = 200 } = Astro.response;
+
 ---
 
 <!-- Global Metadata -->
@@ -21,9 +24,11 @@ const image = "/static-logo.png";
   name="generator" />
 
 <!-- Canonical URL -->
-<!-- <link
-  href={canonicalURL}
-  rel="canonical" /> -->
+{status < 400 ? (
+  <link
+    href={canonicalURL}
+    rel="canonical" />
+) : null}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -35,7 +40,7 @@ const image = "/static-logo.png";
   name="description" />
 
 <!-- i18n -->
-<!-- <HeadHrefLangs /> -->
+{status < 400 ? <HeadHrefLangs /> : null}
 
 <!-- Open Graph / Facebook -->
 <meta

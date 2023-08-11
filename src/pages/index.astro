@@ -1,51 +1,38 @@
 ---
-import { t, changeLanguage } from "i18next";
-
-import banner from "../assets/DI5_8728.jpg";
-import Comments from "../components/comments/Comments.astro";
-import Hero from "../components/hero/Hero.astro";
+import { changeLanguage } from "i18next";
+// import banner from "../assets/DI5_8728.jpg";
+// import Hero from "../components/hero/Hero.astro";
 import Root from "../components/layout/Root.astro";
-import PriceList from "../components/price/PriceList.astro";
-import Promo from "../components/promo/Promo.astro";
-import Services from "../components/services/Services.astro";
+import { __t } from "../features/i18n";
 
-changeLanguage("he");
+changeLanguage("en");
 ---
 
-<Root lang={Astro.params.lang}>
+<Root>
   <div class="mb-8 primary">
-    <div class="">
+    <!-- <div class="">
       <Hero
-        cta={t("cta.contactNow")}
+        cta={__("cta.contactNow")}
         ctaEvent="contact"
-        description={t("site.description")}
+        description={__("site.description")}
         image={banner}
-        title={t("site.title")}
+        title={__("site.title")}
       />
     </div>
     <div class="py-12">
       <Promo
-        cta={t("cta.bookBirthdayParty")}
+        cta={__("cta.bookBirthdayParty")}
         ctaEvent="birthday"
-        description={t("promo.description")}
-        title={t("promo.title")}
+        description={__("promo.description")}
+        title={__("promo.title")}
       />
     </div>
     <div class="">
       <Services
-        description={t("services.description")}
+        description={__("services.description")}
         slugs={["party", "bat-mitzvah", "corporate"]}
-        title={t("services.title")}
+        title={__("services.title")}
       />
-      <PriceList
-        description={t("pricelist.description")}
-        slugs={["personal", "business"]}
-        title={t("pricelist.title")}
-      />
-      <Comments
-        description={t("comments.description")}
-        title={t("comments.title")}
-      />
-    </div>
+    </div> -->
   </div>
 </Root>
