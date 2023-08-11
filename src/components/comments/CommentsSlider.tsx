@@ -1,6 +1,5 @@
-import { createSignal, For } from "solid-js";
-
 import "./CommentsSlider.css";
+import { createSignal, For } from "solid-js";
 import clients from "../../dto/clients.js";
 
 export default function CommentsSlider() {
@@ -15,13 +14,13 @@ export default function CommentsSlider() {
       <div class="flex lg:w-8/12 flex-col lg:flex-row items-center lg:items-start">
         <div class="lg:w-3/6 my-8 lg:my-0 lg:mr-3 relative z-4">
           <div class="w-full">
-            <img 
-              alt="dots" 
+            <img
+              alt="dots"
               class="absolute z-[-1] lg:right-14 -right-6 -top-7"
               src="./svg/hero-dots.svg"
             />
-            <img 
-              alt="ellipse" 
+            <img
+              alt="ellipse"
               class="absolute z-[-1] -left-6 bottom-7"
               src="./svg/ellipse.svg"
             />

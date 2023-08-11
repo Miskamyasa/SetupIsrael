@@ -1,7 +1,5 @@
 import type { ParentProps } from "solid-js";
-
 import { Button as Btn } from "@kobalte/core";
-
 import { events, type AvailableEvents } from "../../features/events";
 
 
