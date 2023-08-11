@@ -39,4 +39,4 @@ module.exports = {
   plugins: [
     require("@kobalte/tailwindcss"),
   ],
-}
+};

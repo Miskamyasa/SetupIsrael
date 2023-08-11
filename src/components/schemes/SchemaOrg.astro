@@ -1,42 +1,43 @@
 ---
-/* eslint-disable */
 // https://schema.org/Organization
 const org = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "url": "https://setupisrael.co.il/",
-    "logo": "https://setupisrael.co.il/static-logo.png"
-}
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://setupisrael.co.il/",
+  "logo": "https://setupisrael.co.il/static-logo.png",
+};
 
 // https://schema.org/LocalBusiness
 const localBusiness = {
-    "@context": "https://schema.org/",
-    "@type": "LocalBusiness",
-    "@id": "#LocalBusiness",
-    "url": "https://setupisrael.co.il/",
-    "legalName": "Setup Israel",
-    "name": "Setup Israel",
-    "description": "Everything you need to produce a professional and colorful Tiktok or Instagram account",
-    "image": "https://setupisrael.co.il/DI5_8728.jpg",
-    "logo": "https://setupisrael.co.il/static-logo.png",
-    "telephone": "+972544923537",
-    "faxNumber": "",
-    "email": "info@setupisrael.co.il",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "33 Lazarov St.",
-        "addressLocality": "Rishon LeZion",
-        "addressRegion": "Center",
-        "addressCountry": "Israel",
-        "postalCode": ""
-    }
-}
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "@id": "#LocalBusiness",
+  "url": "https://setupisrael.co.il/",
+  "legalName": "Setup Israel",
+  "name": "Setup Israel",
+  "description": "Everything you need to produce a professional and colorful Tiktok or Instagram account",
+  "image": "https://setupisrael.co.il/DI5_8728.jpg",
+  "logo": "https://setupisrael.co.il/static-logo.png",
+  "telephone": "+972544923537",
+  "faxNumber": "",
+  "email": "info@setupisrael.co.il",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "33 Lazarov St.",
+    "addressLocality": "Rishon LeZion",
+    "addressRegion": "Center",
+    "addressCountry": "Israel",
+    "postalCode": "",
+  },
+};
 
-const schemes = [org, localBusiness]
+const schemes = [org, localBusiness];
 
 ---
 <Fragment>
-    {schemes.map((scheme) => (
-        <script type="application/ld+json" set:html={JSON.stringify(scheme)} />
-    ))}
+  {schemes.map((scheme) => (
+    <script
+      set:html={JSON.stringify(scheme)}
+      type="application/ld+json" />
+  ))}
 </Fragment>

@@ -14,12 +14,14 @@ import Header from "./Header.astro";
 ---
 
 <!DOCTYPE html>
-<html lang={i18next.language}
-dir={i18next.language === "he" ? "rtl" : "ltr"}
+<html
+  dir={i18next.language === "he" ? "rtl" : "ltr"}
+  lang={i18next.language}
 >
   <Head />
 
   <body class="body min-h-screen w-screen flex flex-col overflow-x-hidden antialiased">
+    <Header />
 
     <div class="flex-grow">
       <slot />
