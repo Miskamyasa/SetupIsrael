@@ -45,6 +45,6 @@
         "vite": "4.4.9"
     },
     "devDependencies": {
-        "husky": "^8.0.0"
+        "husky": "^8.0.3"
     }
 }
