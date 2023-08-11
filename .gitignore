@@ -23,3 +23,7 @@ dist/
 # astro meta / md content
 .astro
 .obsidian
+
+# generated links
+.pages/en
+.pages/ru

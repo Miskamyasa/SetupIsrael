@@ -2,7 +2,8 @@
 import "./global.css";
 import "@fontsource/rubik/variable.css";
 
-import { useTranslations } from "../../features/i18n";
+import i18next from "i18next";
+
 import PartytownScripts from "../partytown/Partytown.astro";
 import SchemaOrg from "../schemes/SchemaOrg.astro";
 
@@ -10,20 +11,15 @@ import Footer from "./Footer.astro";
 import Head from "./Head.astro";
 import Header from "./Header.astro";
 
-const { lang } = useTranslations(Astro.url);
-
 ---
 
 <!DOCTYPE html>
-<html
-  dir={lang === "he" ? "rtl" : "ltr"}
-  lang={lang}>
-
-  <!-- <Head /> -->
+<html lang={i18next.language}
+dir={i18next.language === "he" ? "rtl" : "ltr"}
+>
+  <Head />
 
   <body class="body min-h-screen w-screen flex flex-col overflow-x-hidden antialiased">
-
-    <!-- <Header /> -->
 
     <div class="flex-grow">
       <slot />

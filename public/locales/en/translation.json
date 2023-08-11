@@ -1,0 +1,26 @@
+{
+    "site": {
+        "title": "Welcome to Set Up - A World of Content Creation and Experiences",
+        "description": "A fascinating realm of unique locations for photography, content creation for social networks, and event production"
+    },
+    "cta": {
+      "contactNow": "Schedule a Visit",
+      "bookBirthdayParty": "Book a Birthday Party!"
+    },
+    "promo": {
+      "title": "Your translated Hebrew content for promo description.",
+      "description": "Your translated Hebrew title for Bar Mitzvah Celebrations."
+    },
+    "services": {
+      "title": "The Unique Photography Area in Israel",
+      "description": "We provide a range of services for creating unforgettable experiences and memories."
+    },
+    "pricelist": {
+      "title": "Your translated Hebrew content for pricelist description.",
+      "description": "Your translated Hebrew title for Price List."
+    },
+    "comments": {
+      "title": "Customers Testify",
+      "description": "Your translated Hebrew title for what our happy clients say."
+    }
+}

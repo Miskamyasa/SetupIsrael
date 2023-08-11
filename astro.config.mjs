@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap"
 import solid from "@astrojs/solid-js"
 import tailwind from "@astrojs/tailwind"
 import { defineConfig } from "astro/config"
+import astroI18next from "astro-i18next"
 import { loadEnv } from "vite"
 
 const {
@@ -32,6 +33,7 @@ export default defineConfig({
   //     mode: "middleware",
   // }),
   integrations: [
+    astroI18next(),
     solid(),
     tailwind(),
     sitemap(),
