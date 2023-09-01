@@ -1,23 +1,24 @@
+import { __t } from "../features/i18n";
 import type { Service, AvailableServices } from "./types";
 
 
 const services: Record<AvailableServices, Service> = {
-  "bat-mitzvah": {
-    slug: "batmizvah",
-    title: "Bar Mitzvah Birthday Party",
-    description: "Celebrate your child's Bar Mitzvah in style and create memories!",
-    audience: ["mothers"],
-  },
-  "party": {
-    slug: "party",
-    title: "Book personal party",
-    description: "Celebrate your child's Bar Mitzvah in style and create memories!",
+  "selfie": {
+    slug: "selfie",
+    title: __t("services.selfie.title"),
+    description: __t("services.selfie.description"),
     audience: ["personal"],
   },
-  "corporate": {
-    slug: "corporate",
-    title: "Business Corporate meet-up",
-    description: "Celebrate your child's Bar Mitzvah in style and create memories!",
+  "events": {
+    slug: "events",
+    title: __t("services.events.title"),
+    description: __t("services.events.description"),
+    audience: ["personal", "mothers"],
+  },
+  "productions": {
+    slug: "productions",
+    title: __t("services.productions.title"),
+    description: __t("services.productions.description"),
     audience: ["business"],
   },
 };

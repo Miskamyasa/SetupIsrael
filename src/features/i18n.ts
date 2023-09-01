@@ -12,9 +12,9 @@ type Scope<T extends Record<string, unknown>> = keyof {
 };
 
 
-function onError(scope: Scope<Translation>, result: unknown, locale: Locale): string {
+function onError(scope: Scope<Translation>, result: unknown, locale: Locale): void {
   const err = JSON.stringify({ locale, scope, result }, null, 2);
-  throw Error(`Translations error: \n ${err}`);
+  console.error(`Translations error: \n ${err}`);
 }
 
 function checkTranslations(scope: Scope<Translation>): void {

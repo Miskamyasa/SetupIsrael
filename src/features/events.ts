@@ -3,7 +3,7 @@ import { EventEmitter } from "eventemitter3";
 
 const availableEvents = [
   "contact",
-  "birthday",
+  "details",
 ] as const;
 
 export type AvailableEvents = typeof availableEvents[number];
@@ -26,8 +26,8 @@ events.on("contact", (params) => {
   }
 });
 
-events.on("birthday", (params) => {
+events.on("details", (params) => {
   if (__DEV__) {
-    console.info("birthday", params);
+    console.info("details", params);
   }
 });

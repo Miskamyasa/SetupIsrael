@@ -1,6 +1,7 @@
 import he_common from "./he/common.json";
 import he_home from "./he/home.json";
 import he_menu from "./he/menu.json";
+import he_services from "./he/services.json";
 // import en_common from "./en/common.json";
 // import en_menu from "./en/menu.json";
 // import ru_common from "./ru/common.json";
@@ -17,6 +18,7 @@ export const translations = {
     common: he_common,
     menu: he_menu,
     home: he_home,
+    services: he_services,
   },
   // en: {
   //   common: en_common,

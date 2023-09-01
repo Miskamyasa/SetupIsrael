@@ -1,6 +1,5 @@
 ---
 import { Image } from "@astrojs/image/components";
-import type { AvailableEvents } from "../../features/events";
 import CTA from "../CTA/CTA.astro";
 import Circle from "../svg/Circle.astro";
 import Dots from "../svg/Dots.astro";
@@ -11,16 +10,12 @@ export interface Props {
   title: string
   description: string
   image: string
-  cta: string
-  ctaEvent: AvailableEvents
 }
 
 const {
   title,
   description,
   image,
-  cta,
-  ctaEvent,
 } = Astro.props;
 
 ---
@@ -32,8 +27,8 @@ const {
     <!-- TEXT -->
     <div class="flex flex-col justify-center md:pr-20">
       <CTA
-        buttonEvent={ctaEvent}
-        buttonText={cta}
+        buttonEvent="contact"
+        buttonText="לרכישת כרטיסים"
         description={description}
         title={title}
       />
@@ -47,7 +42,7 @@ const {
       <div class="rounded-es-[100px] overflow-hidden">
         <Image
           alt={title}
-          class={"float-right"}
+          class="float-right"
           format="webp"
           height={480}
           src={image}
@@ -56,16 +51,16 @@ const {
       </div>
       <div
         class={"fill-gust absolute flex z-[-1] " +
-                "top-[-64px] right-0 " +
-                "md:top-0 md:left-[-64px] md:right-auto " +
+                "top-[-64px] end-0 " +
+                "md:top-0 md:start-[-64px] md:end-auto " +
                 "lg:top-0"}>
         <Circle />
       </div>
       <div
         class={"fill-rameo absolute z-[-1] " +
-                "bottom-[-48px] right-6 " +
+                "bottom-[-48px] end-6 " +
                 "md:bottom-0 " +
-                "lg:right-4"}>
+                "lg:end-4"}>
         <Polygon />
       </div>
     </div>

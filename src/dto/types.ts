@@ -1,4 +1,4 @@
-export type AvailableServices = "bat-mitzvah" | "party" | "corporate";
+export type AvailableServices = "selfie" | "events" | "productions";
 
 export type TargetAudience = "personal" | "business" | "mothers";
 
@@ -8,6 +8,7 @@ export interface Service {
   description: string
   audience: TargetAudience[]
 }
+
 export type AvailablePrices = "personal" | "business";
 
 export interface Price {
@@ -18,9 +19,14 @@ export interface Price {
   bullets: string[]
 }
 
+export interface Person {
+  name: string
+  lastName: string
+}
+
 export interface Clients {
   id: number
-  author: {name: string, lastName: string}
+  author: Person
   comment: string
   imageSrc: string
 }
