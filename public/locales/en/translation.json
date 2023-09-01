@@ -22,5 +22,84 @@
     "comments": {
       "title": "Customers Testify",
       "description": "Your translated Hebrew title for what our happy clients say."
+    },
+    "faq": {
+      "title": "FAQ",
+      "description": "Your translated English title for FAQ.",
+      "description-list": [
+    {
+        "title": "Where is Setup located?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Where can you park?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "What are the operating hours?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Until what time can you arrive at Setup?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "For which ages is Setup suitable?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Does every child need a ticket?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "How can you purchase tickets?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Can you reserve a spot in advance?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Is the ticket for a specified hour?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "What is the duration of the visit?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Is the venue accessible for the disabled?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Is it allowed to bring food and drinks?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Can you purchase food and drinks on site?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Are there organized tutorials at Setup?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Can you book Setup for a private event?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Is there a place to store belongings?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Can you come with a weapon?",
+        "description": "Sample answer for the question"
+    },
+    {
+        "title": "Is it allowed to enter with a pet?",
+        "description": "Sample answer for the question"
+    }
+]
+
     }
 }

@@ -1,12 +1,13 @@
 ---
+import { t, changeLanguage } from "i18next";
 import banner from "../../assets/DI5_8728.jpg";
 import Comments from "../../components/comments/Comments.astro";
+import Faq from "../../components/faq/Faq.astro";
 import Hero from "../../components/hero/Hero.astro";
 import Root from "../../components/layout/Root.astro";
 import PriceList from "../../components/price/PriceList.astro";
 import Promo from "../../components/promo/Promo.astro";
 import Services from "../../components/services/Services.astro";
-import { t, changeLanguage } from "i18next";
 
 changeLanguage("ru");
 ---
@@ -15,16 +16,16 @@ changeLanguage("ru");
   <div class="mb-8 primary">
     <div class="">
       <Hero
-        cta={t("cta.contactNow")}
-        ctaEvent="contact"
-        description={t("site.description")}
-        image={banner}
-        title={t("site.title")}
+      cta={t("cta.contactNow")}
+      ctaEvent="contact"
+      description={t("site.description")}
+      image={banner}
+      title={t("site.title")}
       />
     </div>
     <div class="py-12">
       <Promo
-        cta={t("cta.bookBirthdayParty")}
+      cta={t("cta.bookBirthdayParty")}
         ctaEvent="birthday"
         description={t("promo.description")}
         title={t("promo.title")}
@@ -32,11 +33,11 @@ changeLanguage("ru");
     </div>
     <div class="">
       <Services
-        description={t("services.description")}
+      description={t("services.description")}
         slugs={["party", "bat-mitzvah", "corporate"]}
         title={t("services.title")}
-      />
-      <PriceList
+        />
+        <PriceList
         description={t("pricelist.description")}
         slugs={["personal", "business"]}
         title={t("pricelist.title")}
@@ -44,8 +45,12 @@ changeLanguage("ru");
       <Comments
         description={t("comments.description")}
         title={t("comments.title")}
-      />
+        />
+        <Faq
+          description={t("faq.description")}
+          descriptionList={t("faq.description-list", { returnObjects: true })}
+          title={t("faq.title")}
+        />
     </div>
   </div>
 </Root>
-
