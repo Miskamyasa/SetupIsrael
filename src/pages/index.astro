@@ -1,24 +1,24 @@
 ---
 import { changeLanguage } from "i18next";
-// import banner from "../assets/DI5_8728.jpg";
-// import Hero from "../components/hero/Hero.astro";
+import Hero from "../components/hero/Hero.astro";
 import Root from "../components/layout/Root.astro";
+import { __t } from "../features/i18n";
 
 changeLanguage("he");
 ---
 
 <Root>
   <div class="mb-8 primary">
-    <!-- <div class="">
+    <div class="">
       <Hero
-        cta={__("cta.contactNow")}
+        cta={__t("home.hero.ctaText")}
         ctaEvent="contact"
-        description={__("site.description")}
-        image={banner}
-        title={__("site.title")}
+        description={__t("home.hero.description")}
+        image={"/images/hero/DI5_8728.jpg"}
+        title={__t("home.hero.title")}
       />
     </div>
-    <div class="py-12">
+    <!-- <div class="py-12">
       <Promo
         cta={__("cta.bookBirthdayParty")}
         ctaEvent="birthday"

@@ -111,6 +111,11 @@ button:focus-visible {
   align-items: center;
 }
 
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 .button {
   border-radius: 60px;
   display: inline-flex;

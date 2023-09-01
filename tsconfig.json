@@ -10,9 +10,11 @@
     ]
   },
   "include": [
-    "./src/**/*",
     ".eslintrc.cjs",
     "astro.config.mjs",
-    "astro-i18next.config.ts"
-  ],
+    "astro-i18next.config.ts",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.astro"
+  ]
 }

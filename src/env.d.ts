@@ -5,3 +5,6 @@
 declare module "astro-i18next" {
   export function localizePath(path: string): string;
 }
+
+
+declare const __DEV__: boolean;

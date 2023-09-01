@@ -19,3 +19,15 @@ export class Events extends EventEmitter<AvailableEvents> {
 }
 
 export const events = new Events();
+
+events.on("contact", (params) => {
+  if (__DEV__) {
+    console.info("contact", params);
+  }
+});
+
+events.on("birthday", (params) => {
+  if (__DEV__) {
+    console.info("birthday", params);
+  }
+});

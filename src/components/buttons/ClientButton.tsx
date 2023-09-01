@@ -1,15 +1,12 @@
 import type { ParentProps } from "solid-js";
-import { Button as Btn } from "@kobalte/core";
+import { Button } from "@kobalte/core";
 import { events, type AvailableEvents } from "../../features/events";
 
 
-interface ButtonProps extends ParentProps {
-  eventName?: AvailableEvents
-  eventParams?: Record<string, unknown>
-  color?: string
-}
-
-export default function Button(props: ButtonProps) {
+export function ClientButton(props: ParentProps & {
+  eventName?: AvailableEvents,
+  eventParams?: Record<string, unknown>,
+}) {
   const onClick = () => {
     if (props.eventName) {
       events.emit(props.eventName, props.eventParams || {});
@@ -17,10 +14,10 @@ export default function Button(props: ButtonProps) {
   };
 
   return (
-    <Btn.Root
+    <Button.Root
       class="button"
       onClick={onClick}>
       {props.children}
-    </Btn.Root>
+    </Button.Root>
   );
 }

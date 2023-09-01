@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from "@astrojs/image/components";
 import type { AvailableEvents } from "../../features/events";
 import CTA from "../CTA/CTA.astro";
 import Circle from "../svg/Circle.astro";
@@ -22,6 +22,7 @@ const {
   cta,
   ctaEvent,
 } = Astro.props;
+
 ---
 
 <section
@@ -45,7 +46,7 @@ const {
     <div class="relative md:ml-2 mr-[-1.5rem]">
       <div class="rounded-es-[100px] overflow-hidden">
         <Image
-          alt="Unleash your potential"
+          alt={title}
           class={"float-right"}
           format="webp"
           height={480}

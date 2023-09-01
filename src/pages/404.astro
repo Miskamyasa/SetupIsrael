@@ -1,0 +1,19 @@
+---
+import { changeLanguage } from "i18next";
+import Root from "../components/layout/Root.astro";
+import { __t, localizePath } from "../features/i18n";
+
+changeLanguage("he");
+---
+
+<Root>
+  <main class="container mt-6">
+    <h1>{__t("common.404title")}</h1>
+    <p class="my-4">{__t("common.404text")}</p>
+    <a
+      class="link"
+      href={localizePath("/")}>
+      {__t("common.404homeLink")}
+    </a>
+  </main>
+</Root>

@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import type { Price } from "../../dto/types";
-import Button from "../buttons/Button";
+import Button from "../buttons/Button.astro";
 
 export type Props = Price;
 
@@ -12,12 +12,10 @@ const { slug, price, title, description, bullets }: Props = Astro.props;
   <div class="price-card flex flex-col px-8 py-10">
     <h3 class="text-5xl font-bold">{price}&#8362</h3>
     <div>
-      <h2
-        contenteditable
-        class="font-semibold mb-4 mt-4 text-xl">
+      <h2 class="font-semibold mb-4 mt-4 text-xl">
         {title}
       </h2>
-      <p contenteditable>{description}</p>
+      <p>{description}</p>
       <div class={`${slug} my-4`}>
         <Button>Book time slot</Button>
       </div>
@@ -65,3 +63,4 @@ const { slug, price, title, description, bullets }: Props = Astro.props;
     margin-right: 0.5rem;
   }
 </style>
+../buttons/ClientButton

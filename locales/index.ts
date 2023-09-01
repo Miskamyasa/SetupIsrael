@@ -1,25 +1,31 @@
-import en_common from "./en/common.json";
-import en_menu from "./en/menu.json";
 import he_common from "./he/common.json";
+import he_home from "./he/home.json";
 import he_menu from "./he/menu.json";
-import ru_common from "./ru/common.json";
-import ru_menu from "./ru/menu.json";
+// import en_common from "./en/common.json";
+// import en_menu from "./en/menu.json";
+// import ru_common from "./ru/common.json";
+// import ru_menu from "./ru/menu.json";
 
-export const locales = ["he", "en", "ru"] as const;
+export const locales = [
+  "he",
+  // "en",
+  // "ru",
+] as const;
 
 export const translations = {
-  en: {
-    common: en_common,
-    menu: en_menu,
-  },
   he: {
     common: he_common,
     menu: he_menu,
+    home: he_home,
   },
-  ru: {
-    common: ru_common,
-    menu: ru_menu,
-  },
+  // en: {
+  //   common: en_common,
+  //   menu: en_menu,
+  // },
+  // ru: {
+  //   common: ru_common,
+  //   menu: ru_menu,
+  // },
 } as const;
 
 export type Locale = typeof locales[number];

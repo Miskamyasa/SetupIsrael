@@ -1,3 +1,4 @@
+import image from "@astrojs/image";
 import node from "@astrojs/node";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
@@ -16,6 +17,9 @@ const isDev = NODE_ENV === "development";
 
 // https://astro.build/config
 export default defineConfig({
+  env: {
+    __DEV__: isDev,
+  },
   site: SITE_URL,
   trailingSlash: "never",
   // output: "server",
@@ -23,6 +27,7 @@ export default defineConfig({
   //     mode: "middleware",
   // }),
   integrations: [
+    astroI18next(),
     solid(),
     tailwind(),
     sitemap(),
@@ -30,6 +35,8 @@ export default defineConfig({
     //   debug: isDev,
     //   config: {},
     // }),
-    astroI18next(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
   ],
 });
