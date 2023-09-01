@@ -1,6 +1,7 @@
+import { localizePath as _localizePath } from "astro-i18next";
 import { t } from "i18next";
 import { get } from "lodash";
-import { Locale, locales, translations, type Translation } from "../../locales";
+import { type Locale, locales, translations, type Translation } from "../../locales";
 
 
 type Scope<T extends Record<string, unknown>> = keyof {
@@ -27,6 +28,8 @@ function checkTranslations(scope: Scope<Translation>): void {
   }, 1);
 }
 
+
+export const localizePath = _localizePath;
 
 export function __t(scope: Scope<Translation>) {
   if (import.meta.env.MODE === "development") {

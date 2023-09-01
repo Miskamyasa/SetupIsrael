@@ -1,0 +1,37 @@
+---
+import { changeLanguage } from "i18next";
+// import banner from "../../assets/DI5_8728.jpg";
+// import Hero from "../../components/hero/Hero.astro";
+import Root from "../../components/layout/Root.astro";
+
+changeLanguage("ru");
+---
+
+<Root>
+  <div class="mb-8 primary">
+    <!-- <div class="">
+      <Hero
+        cta={__("cta.contactNow")}
+        ctaEvent="contact"
+        description={__("site.description")}
+        image={banner}
+        title={__("site.title")}
+      />
+    </div>
+    <div class="py-12">
+      <Promo
+        cta={__("cta.bookBirthdayParty")}
+        ctaEvent="birthday"
+        description={__("promo.description")}
+        title={__("promo.title")}
+      />
+    </div>
+    <div class="">
+      <Services
+        description={__("services.description")}
+        slugs={["party", "bat-mitzvah", "corporate"]}
+        title={__("services.title")}
+      />
+    </div> -->
+  </div>
+</Root>

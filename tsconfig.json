@@ -8,5 +8,11 @@
         "name": "@astrojs/ts-plugin"
       }
     ]
-  }
+  },
+  "include": [
+    "./src/**/*",
+    ".eslintrc.cjs",
+    "astro.config.mjs",
+    "astro-i18next.config.ts"
+  ],
 }

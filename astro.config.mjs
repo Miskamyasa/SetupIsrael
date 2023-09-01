@@ -1,4 +1,3 @@
-import image from "@astrojs/image";
 import node from "@astrojs/node";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
@@ -32,8 +31,5 @@ export default defineConfig({
     //   config: {},
     // }),
     astroI18next(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
   ],
 });
