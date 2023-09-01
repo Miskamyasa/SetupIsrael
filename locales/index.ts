@@ -5,7 +5,7 @@ import he_menu from "./he/menu.json";
 import ru_common from "./ru/common.json";
 import ru_menu from "./ru/menu.json";
 
-export const locales = ["en", "he", "ru"] as const;
+export const locales = ["he", "en", "ru"] as const;
 
 export const translations = {
   en: {
