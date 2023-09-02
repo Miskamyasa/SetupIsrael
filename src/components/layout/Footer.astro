@@ -5,16 +5,15 @@ import FacebookIcon from "../svg/FacebookIcon.astro";
 import InstagramIcon from "../svg/InstagramIcon.astro";
 import Phone from "../svg/Phone.astro";
 import TikTokIcon from "../svg/TikTokIcon.astro";
+import {__t} from "../../features/i18n"
 ---
-
 <footer class="shrink-0 bg-[#1E1E1E] text-white">
   <div class="container py-5 md:py-11 ">
     <div class="flex flex-wrap justify-between flex-col sm:flex-row">
       <div class="information">
         <Logo footer={true} />
         <p class="mt-6 w-[270px] ">
-          Designed corners and a variety of accessories that will give you
-          everything you need to produce any photo or video you dream of
+          {__t("footer.description")}
         </p>
         <div class="flex w-full py-4 items-center ">
           <a
@@ -28,17 +27,17 @@ import TikTokIcon from "../svg/TikTokIcon.astro";
       </div>
       <div>
         <h6 class="mb-1 sm:mb-8 text-lg font-semibold">
-          What We do
+          {__t("footer.whatWeDo")}
         </h6>
         <ul>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Birthday</a></li>
-          <li><a href="#">Party's</a></li>
-          <li><a href="#">B2B Events</a></li>
+          <li><a href="#">{__t("footer.events")}</a></li>
+          <li><a href="#">{__t("footer.birthday")}</a></li>
+          <li><a href="#">{__t("footer.parties")}</a></li>
+          <li><a href="#">{__t("footer.b2bEvents")}</a></li>
         </ul>
       </div>
       <div class="my-2 sm:mb-8">
-        <h6 class="mb-1 sm:mb-8 text-lg font-semibold">Contacts</h6>
+        <h6 class="mb-1 sm:mb-8 text-lg font-semibold">{__t("footer.contacts")}</h6>
         <div class="flex gap-2 mb-2">
           <div>
             <Phone />
@@ -59,7 +58,7 @@ import TikTokIcon from "../svg/TikTokIcon.astro";
     </div>
     <div class="flex justify-center items-center">
       <p class="text-sm">
-        <span>Copyright&nbsp;</span>
+        <span>{__t("footer.copyright")}&nbsp;</span>
         <span>&copy;</span>
         <span>&nbsp;setupisrael.co.il&nbsp;</span>
         <span>{new Date().getFullYear()}</span>
