@@ -1,16 +1,18 @@
 ---
 import { changeLanguage } from "i18next";
+import ContactUs from "../components/contactUs/ContactUs.astro";
 import Hero from "../components/hero/Hero.astro";
 import Root from "../components/layout/Root.astro";
 import Promo from "../components/promo/Promo.astro";
 import Services from "../components/services/Services.astro";
 import { __t } from "../features/i18n";
 
-changeLanguage("he");
+changeLanguage("en");
 ---
 
 <Root>
   <div class="mb-8 primary">
+    <ContactUs/>
     <Hero
       description={__t("home.hero.description")}
       image={"/images/hero/DI5_8728.jpg"}
