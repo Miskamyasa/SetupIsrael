@@ -8,9 +8,13 @@ import Links from "./Links.astro";
 <div class="shrink-0">
   <header class="py-9 relative z-20 container row justify-between">
     <Logo />
-    <Links />
-    <LanguageSelector
-      class="outlined appearance-none text-sm rounded-sm block py-1 px-2 bg-slate-200 text-slate-800"
-      showFlag={true} />
+    <div class="md:order-2">
+      <LanguageSelector
+        class="outlined appearance-none text-sm rounded-sm block py-1 px-2 bg-slate-200 text-slate-800"
+        showFlag={true} />
+    </div>
+    <nav class="grow w-full mt-8 md:w-auto md:mt-0 md:ms-10 md:order-1">
+      <Links />
+    </nav>
   </header>
 </div>

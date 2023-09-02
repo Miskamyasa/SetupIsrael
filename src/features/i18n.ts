@@ -29,7 +29,10 @@ function checkTranslations(scope: Scope<Translation>): void {
 }
 
 
-export const localizePath = _localizePath;
+export const localizePath = (path: string) => {
+  const localized = _localizePath(path);
+  return localized;
+};
 
 export function __t(scope: Scope<Translation>) {
   if (import.meta.env.MODE === "development") {
