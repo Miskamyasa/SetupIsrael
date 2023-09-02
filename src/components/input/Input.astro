@@ -1,17 +1,24 @@
 ---
 export interface Props {
-  label?: string;
-  name: string;
-  placeholder?: string;
+  label?: string
+  name: string
+  placeholder?: string
 }
 
 const { label, name, placeholder } = Astro.props;
 ---
 
-<label for={name} class='block my-2 ml-3'>
+<label
+  class='block my-2 ml-3'
+  for={name}>
   {label}
 </label>
-<input type="text" id={name} name={name} placeholder={placeholder} class="drop-shadow-xl rounded-3xl w-full py-3 px-3 focus:outline-none" />
+<input
+  class="drop-shadow-xl rounded-3xl w-full py-3 px-3 focus:outline-none"
+  id={name}
+  name={name}
+  placeholder={placeholder}
+  type="text" />
 
 <style>
 input {

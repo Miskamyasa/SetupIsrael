@@ -1,0 +1,17 @@
+{
+  "cta1": {
+    "title": "Contact Us",
+    "description": "Hear how we helped parents just like you create the perfect celebration for their child."
+  },
+  "phoneLabel": "0544923537",
+  "emailLabel": "info@setupisrael.co.il",
+  "cta2": {
+    "title": "Fill out the form",
+    "description": "Still got questions?"
+  },
+  "inputNameLabel": "Name",
+  "inputNamePlaceholder": "Enter your name",
+  "inputMobileLabel": "Mobile number",
+  "inputMobilePlaceholder": "Enter your number",
+  "buttonLabel": "Get a quote"
+}
