@@ -1,0 +1,13 @@
+---
+import { headerLinks } from "../../features/navigation";
+---
+
+<ul class="flex grow gap-6 ms-10">
+  {
+    headerLinks.map((link) => (
+      <li>
+        <a href={link.path}>{link.label}</a>
+      </li>
+    ))
+  }
+</ul>

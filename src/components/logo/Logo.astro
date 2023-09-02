@@ -1,5 +1,5 @@
 ---
-import { localizePath } from "../../features/i18n";
+import { HOME } from "../../features/navigation";
 
 export interface Props {
   footer?: boolean
@@ -11,7 +11,7 @@ const src = footer ? "/svg/logo-white.svg" : "/svg/logo.svg";
 
 ---
 
-<a href={localizePath("/")}>
+<a href={HOME.path}>
   <img
     alt="Logo"
     class={"logo" + (footer ? " in-footer" : "")}

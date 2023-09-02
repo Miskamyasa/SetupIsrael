@@ -1,0 +1,13 @@
+---
+import { footerLinks } from "../../features/navigation";
+---
+
+<ul>
+  {
+    footerLinks.map((link) => (
+      <li>
+        <a href={link.path}>{link.label}</a>
+      </li>
+    ))
+  }
+</ul>
