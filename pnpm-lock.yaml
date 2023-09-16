@@ -98,6 +98,9 @@ dependencies:
   solid-js:
     specifier: 1.7.11
     version: 1.7.11
+  swiper:
+    specifier: 10.2.0
+    version: 10.2.0
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
@@ -6054,6 +6057,11 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+    dev: false
+
+  /swiper@10.2.0:
+    resolution: {integrity: sha512-nktQsOtBInJjr3f5DicxC8eHYGcLXDVIGPSon0QoXRaO6NjKnATCbQ8SZsD3dN1Ph1RH4EhVPwSYCcuDRFWHGQ==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /synckit@0.8.5:

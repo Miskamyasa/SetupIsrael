@@ -1,0 +1,103 @@
+---
+const {carousel} = Astro.props
+import { Image } from "@astrojs/image/components";
+---
+
+<link
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.css"
+  rel="stylesheet"
+/>
+<style>
+  .carousel {
+    --swiper-navigation-color: var(--color-white);
+    --swiper-theme-color: var(--color-white);
+  }
+swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+    swiper-slide img {
+      display: sw </swiper-slidek;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper {
+      height: 80%;
+      width: 100%;
+    }
+
+    .mySwiper2 {
+      height: 20%;
+      box-sizing: border-box;
+    }
+
+    .mySwiper2 swiper-slide {
+      width: 25%;
+      height: 100%;
+      /* opacity: 0.4; */
+    }
+
+
+    .mySwiper2 .swiper-slide-thumb-active {
+      opacity: 1;
+
+    }
+
+</style>
+
+<div class="relative overflow-y-hidden">
+  <swiper-container
+    loop="true"
+    navigation="true"
+    space-between="10"
+    thumbs-swiper=".my-thumbs"
+    class="mySwiper carousel"
+
+  >
+    {
+      carousel.map((image) => (
+        <swiper-slide class="object-contain rounded-sm">
+          <Image
+            alt={image.alt}
+
+            fit={"cover"}
+            loading="lazy"
+            src={image.src}
+            title={image.title}
+          />
+        </swiper-slide>
+      ))
+    }
+  </swiper-container>
+  <swiper-container class="my-thumbs  mySwiper2  " slides-per-view="3" loop="true" free-mode="true" watch-slides-progress="true">
+          {
+      carousel.map((image) => (
+        <swiper-slide class="object-contain p-1 rounded-sm ">
+          <Image
+            alt={image.alt}
+            fit={"cover"}
+            loading="lazy"
+            src={image.src}
+            title={image.title}
+            class="rounded-md "
+          />
+        </swiper-slide>
+      ))
+    }
+  </swiper-container>
+  <script
+    src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
+  ></script>
+</div>
+

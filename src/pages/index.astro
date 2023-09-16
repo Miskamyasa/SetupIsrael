@@ -4,6 +4,7 @@ import Hero from "../components/hero/Hero.astro";
 import Root from "../components/layout/Root.astro";
 import Promo from "../components/promo/Promo.astro";
 import Services from "../components/services/Services.astro";
+import Gallery from "../components/gallery/Gallery.astro";
 import { __t } from "../features/i18n";
 
 changeLanguage("he");
@@ -11,7 +12,8 @@ changeLanguage("he");
 
 <Root>
   <div class="mb-8 primary">
-    <Hero
+    <Gallery/>
+    <!-- <Hero
       description={__t("home.hero.description")}
       image={"/images/hero/DI5_8728.jpg"}
       title={__t("home.hero.title")}
@@ -26,6 +28,6 @@ changeLanguage("he");
         description={__t("home.promo.description")}
         title={__t("home.promo.title")}
       />
-    </div>
+    </div> -->
   </div>
 </Root>

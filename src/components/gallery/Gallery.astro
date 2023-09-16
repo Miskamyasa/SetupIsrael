@@ -1,0 +1,107 @@
+---
+import carousel from "../../data/carousel"
+import GalleryCarousel from "./GalleryCarousel.astro"
+import { Image } from "@astrojs/image/components"
+// import { useTranslation } from "../../i18n/translator";
+
+---
+
+<style>
+  .gallery__container {
+    display: grid;
+    grid-template: repeat(2, 240px) / 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .image-0 {
+    grid-column: 1 / 3;
+  }
+  .image-4 {
+    grid-column: 2 / 4;
+  }
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+<section
+  class="carousel"
+  id="carousel"
+>
+  <h2 class="sr-only"></h2>
+  <p class="sr-only"></p>
+  <!-- <GalleryCarousel carousel={carousel}/> -->
+  <div class="gallery__container container">
+    {
+      carousel.map((image, index) => (
+        <Image
+          alt={image.alt}
+          fit={"cover"}
+          loading="lazy"
+          src={image.src}
+          title={image.title}
+          class={`rounded-md image-${index} w-full h-full object-cover`}
+        />
+      ))
+    }
+  </div>
+  <div
+    id="myModal"
+    class="modal"
+  >
+    <span
+      class="close cursor"
+
+      >&times;</span
+    >
+    <div class="modal-content">
+      <GalleryCarousel carousel={carousel} />
+    </div>
+  </div>
+</section>
+<script>
+  const btn = document.querySelector(".gallery__container")
+  btn.addEventListener("click",openModal)
+  function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+</script>
