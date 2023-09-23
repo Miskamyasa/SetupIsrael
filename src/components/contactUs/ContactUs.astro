@@ -1,0 +1,60 @@
+---
+import Button from "../buttons/Button.astro";
+import CTA from "../CTA/CTA.astro";
+import Input from "../input/Input.astro";
+import Email from "../svg/EmailBlack.astro";
+import Phone from "../svg/PhoneBlack.astro";
+---
+
+<section class="container flex flex-col md:flex-row">
+  <div class="md:w-3/5">
+    <div class="my-4 md:mb-10">
+      <CTA
+        description="Hear how we helped parents just like you create the perfect celebration for their child."
+        title="Contact Us"
+      />
+    </div>
+    <div class="flex gap-2 my-3">
+      <div>
+        <Phone />
+      </div>
+      <a href="tel:+972544923537">
+        <p>0544923537</p>
+      </a>
+    </div>
+    <div class="flex mb-3">
+      <div class="mr-2">
+        <Email />
+      </div>
+      <a href="mailto:info@setupisrael.co.il">
+        <p>info@setupisrael.co.il</p>
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col md:w-2/5">
+    <div class="md:ml-2">
+      <CTA
+        description="Still got questions?"
+        title="Fill out the form "
+      />
+
+    </div>
+    <form class="flex flex-col my-3">
+      <div class="my-1">
+        <Input
+          label="Name"
+          name="username"
+          placeholder="Enter your name" />
+      </div>
+      <div class="my-1">
+        <Input
+          label="Mobile number"
+          name="mobile"
+          placeholder="Enter your number" />
+      </div>
+      <div class="width-3 mt-6 mb-3">
+        <Button>Get a quote</Button>
+      </div>
+    </form>
+  </div>
+</section>
