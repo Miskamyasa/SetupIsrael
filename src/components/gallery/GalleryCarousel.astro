@@ -1,0 +1,122 @@
+---
+const { carousel } = Astro.props;
+import { Image } from "@astrojs/image/components";
+
+export type CarouselImage = {
+  src: string,
+  title: string,
+  alt: string,
+};
+---
+
+<link
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.css"
+  rel="stylesheet"
+/>
+
+<div class="relative overflow-y-hidden">
+  <swiper-container
+    class="mySwiper carousel md:max-h-[40rem]"
+    loop="true"
+    navigation="true"
+    space-between="10"
+    thumbs-swiper=".my-thumbs"
+  >
+    {
+      carousel.map((image: CarouselImage) => (
+        <swiper-slide class="object-contain rounded-sm ">
+          <Image
+            alt={image.alt}
+            fit={"cover"}
+            height={1200}
+            loading="lazy"
+            src={image.src}
+            title={image.title}
+            width={1600}
+          />
+        </swiper-slide>
+      ))
+    }
+  </swiper-container>
+  <swiper-container
+    class="my-thumbs mySwiper2"
+    free-mode="true"
+    loop="true"
+    slides-per-view="6"
+    watch-slides-progress="true"
+  >
+    {
+      carousel.map((image: CarouselImage) => (
+        <swiper-slide class="object-contain p-1 rounded-sm ">
+          <Image
+            alt={image.alt}
+            class="rounded-md "
+            fit={"cover"}
+            height={1200}
+            loading="lazy"
+            src={image.src}
+            title={image.title}
+            width={1600}
+          />
+        </swiper-slide>
+      ))
+    }
+  </swiper-container>
+  <script
+    src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
+  ></script>
+</div>
+
+<style>
+  .carousel {
+    --swiper-navigation-color: var(--color-white);
+    --swiper-theme-color: var(--color-white);
+  }
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide img {
+    display: sw </swiper-slidek;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mySwiper {
+    height: 80%;
+    width: 100%;
+    background: #000;
+  }
+
+  .mySwiper2 {
+    display: none;
+    height: 10%;
+    box-sizing: border-box;
+    background: #000;
+  }
+  @media (min-width: 768px) {
+    .mySwiper2 {
+      display: block;
+      height: 10%;
+      box-sizing: border-box;
+      background: #000;
+    }
+  }
+
+  .mySwiper2 swiper-slide {
+    width: 10%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+</style>
